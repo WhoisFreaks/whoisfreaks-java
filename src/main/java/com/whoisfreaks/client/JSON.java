@@ -162,6 +162,7 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.whoisfreaks.client.model.SslUnitInfo.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.whoisfreaks.client.model.Subdomain.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.whoisfreaks.client.model.SubdomainsResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.whoisfreaks.client.model.ThreatFeedStatus.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.whoisfreaks.client.model.ThreatSource.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.whoisfreaks.client.model.TrustSignals.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.whoisfreaks.client.model.TyposquattingDomain.CustomTypeAdapterFactory());

@@ -225,7 +225,7 @@ public class AccountApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/v3.3/status";
+        String localVarPath = "/v3.4/status";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();

@@ -33,6 +33,7 @@ docs/DatabasesIpSecurityApi.md
 docs/DatabasesIpWhoisApi.md
 docs/DatabasesNewlyRegisteredApi.md
 docs/DatabasesSubdomainsApi.md
+docs/DatabasesThreatFeedApi.md
 docs/DatabasesWhoisApi.md
 docs/DateRangeStatus.md
 docs/DgaFeatures.md
@@ -94,6 +95,7 @@ docs/SslUnitInfo.md
 docs/Subdomain.md
 docs/SubdomainsApi.md
 docs/SubdomainsResponse.md
+docs/ThreatFeedStatus.md
 docs/ThreatSource.md
 docs/TrustSignals.md
 docs/TyposquattingApi.md
@@ -139,6 +141,7 @@ src/main/java/com/whoisfreaks/client/api/DatabasesIpSecurityApi.java
 src/main/java/com/whoisfreaks/client/api/DatabasesIpWhoisApi.java
 src/main/java/com/whoisfreaks/client/api/DatabasesNewlyRegisteredApi.java
 src/main/java/com/whoisfreaks/client/api/DatabasesSubdomainsApi.java
+src/main/java/com/whoisfreaks/client/api/DatabasesThreatFeedApi.java
 src/main/java/com/whoisfreaks/client/api/DatabasesWhoisApi.java
 src/main/java/com/whoisfreaks/client/api/DnsApi.java
 src/main/java/com/whoisfreaks/client/api/DomainAvailabilityApi.java
@@ -224,6 +227,7 @@ src/main/java/com/whoisfreaks/client/model/SslResponse.java
 src/main/java/com/whoisfreaks/client/model/SslUnitInfo.java
 src/main/java/com/whoisfreaks/client/model/Subdomain.java
 src/main/java/com/whoisfreaks/client/model/SubdomainsResponse.java
+src/main/java/com/whoisfreaks/client/model/ThreatFeedStatus.java
 src/main/java/com/whoisfreaks/client/model/ThreatSource.java
 src/main/java/com/whoisfreaks/client/model/TrustSignals.java
 src/main/java/com/whoisfreaks/client/model/TyposquattingDomain.java
@@ -245,6 +249,7 @@ src/test/java/com/whoisfreaks/client/api/DatabasesIpSecurityApiTest.java
 src/test/java/com/whoisfreaks/client/api/DatabasesIpWhoisApiTest.java
 src/test/java/com/whoisfreaks/client/api/DatabasesNewlyRegisteredApiTest.java
 src/test/java/com/whoisfreaks/client/api/DatabasesSubdomainsApiTest.java
+src/test/java/com/whoisfreaks/client/api/DatabasesThreatFeedApiTest.java
 src/test/java/com/whoisfreaks/client/api/DatabasesWhoisApiTest.java
 src/test/java/com/whoisfreaks/client/api/DnsApiTest.java
 src/test/java/com/whoisfreaks/client/api/DomainAvailabilityApiTest.java
@@ -325,6 +330,7 @@ src/test/java/com/whoisfreaks/client/model/SslResponseTest.java
 src/test/java/com/whoisfreaks/client/model/SslUnitInfoTest.java
 src/test/java/com/whoisfreaks/client/model/SubdomainTest.java
 src/test/java/com/whoisfreaks/client/model/SubdomainsResponseTest.java
+src/test/java/com/whoisfreaks/client/model/ThreatFeedStatusTest.java
 src/test/java/com/whoisfreaks/client/model/ThreatSourceTest.java
 src/test/java/com/whoisfreaks/client/model/TrustSignalsTest.java
 src/test/java/com/whoisfreaks/client/model/TyposquattingDomainTest.java

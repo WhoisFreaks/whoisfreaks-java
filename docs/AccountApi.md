@@ -5,7 +5,7 @@ All URIs are relative to *https://api.whoisfreaks.com*
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
 | [**accountUsage**](AccountApi.md#accountUsage) | **GET** /v1.0/whoisapi/usage | Account Usage |
-| [**databaseFileStatus**](AccountApi.md#databaseFileStatus) | **GET** /v3.3/status | Database File Status (Public) |
+| [**databaseFileStatus**](AccountApi.md#databaseFileStatus) | **GET** /v3.4/status | Database File Status (Public) |
 | [**rotateApiKey**](AccountApi.md#rotateApiKey) | **GET** /v1.0/api-key/rotate | Rotate API Key |
 
 

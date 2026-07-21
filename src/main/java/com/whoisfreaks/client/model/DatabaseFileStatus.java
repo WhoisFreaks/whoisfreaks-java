@@ -22,6 +22,7 @@ import com.google.gson.stream.JsonWriter;
 import com.whoisfreaks.client.model.DatabaseUpdates;
 import com.whoisfreaks.client.model.DateRangeStatus;
 import com.whoisfreaks.client.model.NewlyStatus;
+import com.whoisfreaks.client.model.ThreatFeedStatus;
 import java.io.IOException;
 import java.util.Arrays;
 
@@ -77,6 +78,11 @@ public class DatabaseFileStatus {
   @SerializedName(SERIALIZED_NAME_DROPPED_WITH_BACKLINKS)
   @javax.annotation.Nullable
   private DateRangeStatus droppedWithBacklinks;
+
+  public static final String SERIALIZED_NAME_THREAT_FEED = "threat_feed";
+  @SerializedName(SERIALIZED_NAME_THREAT_FEED)
+  @javax.annotation.Nullable
+  private ThreatFeedStatus threatFeed;
 
   public static final String SERIALIZED_NAME_DATABASE_UPDATES = "database_updates";
   @SerializedName(SERIALIZED_NAME_DATABASE_UPDATES)
@@ -181,6 +187,25 @@ public class DatabaseFileStatus {
   }
 
 
+  public DatabaseFileStatus threatFeed(@javax.annotation.Nullable ThreatFeedStatus threatFeed) {
+    this.threatFeed = threatFeed;
+    return this;
+  }
+
+  /**
+   * Get threatFeed
+   * @return threatFeed
+   */
+  @javax.annotation.Nullable
+  public ThreatFeedStatus getThreatFeed() {
+    return threatFeed;
+  }
+
+  public void setThreatFeed(@javax.annotation.Nullable ThreatFeedStatus threatFeed) {
+    this.threatFeed = threatFeed;
+  }
+
+
   public DatabaseFileStatus databaseUpdates(@javax.annotation.Nullable DatabaseUpdates databaseUpdates) {
     this.databaseUpdates = databaseUpdates;
     return this;
@@ -259,13 +284,14 @@ public class DatabaseFileStatus {
         Objects.equals(this.cleanedExpired, databaseFileStatus.cleanedExpired) &&
         Objects.equals(this.dropped, databaseFileStatus.dropped) &&
         Objects.equals(this.droppedWithBacklinks, databaseFileStatus.droppedWithBacklinks) &&
+        Objects.equals(this.threatFeed, databaseFileStatus.threatFeed) &&
         Objects.equals(this.databaseUpdates, databaseFileStatus.databaseUpdates)&&
         Objects.equals(this.additionalProperties, databaseFileStatus.additionalProperties);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(newly, expired, cleanedExpired, dropped, droppedWithBacklinks, databaseUpdates, additionalProperties);
+    return Objects.hash(newly, expired, cleanedExpired, dropped, droppedWithBacklinks, threatFeed, databaseUpdates, additionalProperties);
   }
 
   @Override
@@ -277,6 +303,7 @@ public class DatabaseFileStatus {
     sb.append("    cleanedExpired: ").append(toIndentedString(cleanedExpired)).append("\n");
     sb.append("    dropped: ").append(toIndentedString(dropped)).append("\n");
     sb.append("    droppedWithBacklinks: ").append(toIndentedString(droppedWithBacklinks)).append("\n");
+    sb.append("    threatFeed: ").append(toIndentedString(threatFeed)).append("\n");
     sb.append("    databaseUpdates: ").append(toIndentedString(databaseUpdates)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
@@ -306,6 +333,7 @@ public class DatabaseFileStatus {
     openapiFields.add("cleaned_expired");
     openapiFields.add("dropped");
     openapiFields.add("dropped_with_backlinks");
+    openapiFields.add("threat_feed");
     openapiFields.add("database_updates");
 
     // a set of required properties/fields (JSON key names)

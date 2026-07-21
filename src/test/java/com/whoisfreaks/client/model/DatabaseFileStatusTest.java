@@ -21,6 +21,7 @@ import com.google.gson.stream.JsonWriter;
 import com.whoisfreaks.client.model.DatabaseUpdates;
 import com.whoisfreaks.client.model.DateRangeStatus;
 import com.whoisfreaks.client.model.NewlyStatus;
+import com.whoisfreaks.client.model.ThreatFeedStatus;
 import java.io.IOException;
 import java.util.Arrays;
 import org.junit.jupiter.api.Disabled;
@@ -78,6 +79,14 @@ public class DatabaseFileStatusTest {
     @Test
     public void droppedWithBacklinksTest() {
         // TODO: test droppedWithBacklinks
+    }
+
+    /**
+     * Test the property 'threatFeed'
+     */
+    @Test
+    public void threatFeedTest() {
+        // TODO: test threatFeed
     }
 
     /**

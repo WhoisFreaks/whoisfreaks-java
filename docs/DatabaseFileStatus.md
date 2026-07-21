@@ -12,6 +12,7 @@
 |**cleanedExpired** | **DateRangeStatus** |  |  [optional] |
 |**dropped** | **DateRangeStatus** |  |  [optional] |
 |**droppedWithBacklinks** | **DateRangeStatus** |  |  [optional] |
+|**threatFeed** | **ThreatFeedStatus** |  |  [optional] |
 |**databaseUpdates** | **DatabaseUpdates** |  |  [optional] |
 
 

@@ -51,7 +51,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.whoisfreaks</groupId>
   <artifactId>whoisfreaks</artifactId>
-  <version>0.20.0</version>
+  <version>0.21.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -67,7 +67,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.whoisfreaks:whoisfreaks:0.20.0"
+     implementation "com.whoisfreaks:whoisfreaks:0.21.0"
   }
 ```
 
@@ -81,7 +81,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/whoisfreaks-0.20.0.jar`
+* `target/whoisfreaks-0.21.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -132,7 +132,7 @@ All URIs are relative to *https://api.whoisfreaks.com*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AccountApi* | [**accountUsage**](docs/AccountApi.md#accountUsage) | **GET** /v1.0/whoisapi/usage | Account Usage
-*AccountApi* | [**databaseFileStatus**](docs/AccountApi.md#databaseFileStatus) | **GET** /v3.3/status | Database File Status (Public)
+*AccountApi* | [**databaseFileStatus**](docs/AccountApi.md#databaseFileStatus) | **GET** /v3.4/status | Database File Status (Public)
 *AccountApi* | [**rotateApiKey**](docs/AccountApi.md#rotateApiKey) | **GET** /v1.0/api-key/rotate | Rotate API Key
 *AsnWhoisApi* | [**asnWhois**](docs/AsnWhoisApi.md#asnWhois) | **GET** /v2.0/asn-whois | ASN WHOIS Lookup
 *DatabasesAsnWhoisApi* | [**dbAsnWhois**](docs/DatabasesAsnWhoisApi.md#dbAsnWhois) | **GET** /v3.3/download/snapshot/asn/whois | ASN WHOIS Snapshot
@@ -163,6 +163,12 @@ Class | Method | HTTP request | Description
 *DatabasesSubdomainsApi* | [**dbSubdomainsDaily**](docs/DatabasesSubdomainsApi.md#dbSubdomainsDaily) | **GET** /v3.2/download/dbupdate/daily/subdomains | Subdomains Daily
 *DatabasesSubdomainsApi* | [**dbSubdomainsMonthly**](docs/DatabasesSubdomainsApi.md#dbSubdomainsMonthly) | **GET** /v3.2/download/dbupdate/monthly/subdomains | Subdomains Monthly
 *DatabasesSubdomainsApi* | [**dbSubdomainsWeekly**](docs/DatabasesSubdomainsApi.md#dbSubdomainsWeekly) | **GET** /v3.2/download/dbupdate/weekly/subdomains | Subdomains Weekly
+*DatabasesThreatFeedApi* | [**downloadThreatFeedMalware**](docs/DatabasesThreatFeedApi.md#downloadThreatFeedMalware) | **GET** /v3.4/download/threat-feed/malware | Download the daily malware threat feed (CSV)
+*DatabasesThreatFeedApi* | [**downloadThreatFeedMalwareSample**](docs/DatabasesThreatFeedApi.md#downloadThreatFeedMalwareSample) | **GET** /v3.4/download/threat-feed/malware/sample | Download a sample of the malware threat feed (CSV)
+*DatabasesThreatFeedApi* | [**downloadThreatFeedPhishing**](docs/DatabasesThreatFeedApi.md#downloadThreatFeedPhishing) | **GET** /v3.4/download/threat-feed/phishing | Download the daily phishing threat feed (CSV)
+*DatabasesThreatFeedApi* | [**downloadThreatFeedPhishingSample**](docs/DatabasesThreatFeedApi.md#downloadThreatFeedPhishingSample) | **GET** /v3.4/download/threat-feed/phishing/sample | Download a sample of the phishing threat feed (CSV)
+*DatabasesThreatFeedApi* | [**downloadThreatFeedSpam**](docs/DatabasesThreatFeedApi.md#downloadThreatFeedSpam) | **GET** /v3.4/download/threat-feed/spam | Download the daily spam threat feed (CSV)
+*DatabasesThreatFeedApi* | [**downloadThreatFeedSpamSample**](docs/DatabasesThreatFeedApi.md#downloadThreatFeedSpamSample) | **GET** /v3.4/download/threat-feed/spam/sample | Download a sample of the spam threat feed (CSV)
 *DatabasesWhoisApi* | [**dbWhoisDaily**](docs/DatabasesWhoisApi.md#dbWhoisDaily) | **GET** /v3.3/download/dbupdate/daily/domains/whois | WHOIS Database Daily
 *DatabasesWhoisApi* | [**dbWhoisMonthly**](docs/DatabasesWhoisApi.md#dbWhoisMonthly) | **GET** /v3.3/download/dbupdate/monthly/domains/whois | WHOIS Database Monthly
 *DatabasesWhoisApi* | [**dbWhoisWeekly**](docs/DatabasesWhoisApi.md#dbWhoisWeekly) | **GET** /v3.3/download/dbupdate/weekly/domains/whois | WHOIS Database Weekly
@@ -258,6 +264,7 @@ Class | Method | HTTP request | Description
  - [SslUnitInfo](docs/SslUnitInfo.md)
  - [Subdomain](docs/Subdomain.md)
  - [SubdomainsResponse](docs/SubdomainsResponse.md)
+ - [ThreatFeedStatus](docs/ThreatFeedStatus.md)
  - [ThreatSource](docs/ThreatSource.md)
  - [TrustSignals](docs/TrustSignals.md)
  - [TyposquattingDomain](docs/TyposquattingDomain.md)
