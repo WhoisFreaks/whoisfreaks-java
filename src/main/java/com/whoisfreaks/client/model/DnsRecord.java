@@ -1,6 +1,6 @@
 /*
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -55,7 +55,12 @@ public class DnsRecord {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
   @javax.annotation.Nullable
-  private String type;
+  private Integer type;
+
+  public static final String SERIALIZED_NAME_DNS_TYPE = "dnsType";
+  @SerializedName(SERIALIZED_NAME_DNS_TYPE)
+  @javax.annotation.Nullable
+  private String dnsType;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -66,6 +71,21 @@ public class DnsRecord {
   @SerializedName(SERIALIZED_NAME_TTL)
   @javax.annotation.Nullable
   private Integer ttl;
+
+  public static final String SERIALIZED_NAME_RAW_TEXT = "rawText";
+  @SerializedName(SERIALIZED_NAME_RAW_TEXT)
+  @javax.annotation.Nullable
+  private String rawText;
+
+  public static final String SERIALIZED_NAME_R_RSET_TYPE = "rRsetType";
+  @SerializedName(SERIALIZED_NAME_R_RSET_TYPE)
+  @javax.annotation.Nullable
+  private Integer rRsetType;
+
+  public static final String SERIALIZED_NAME_SINGLE_NAME = "singleName";
+  @SerializedName(SERIALIZED_NAME_SINGLE_NAME)
+  @javax.annotation.Nullable
+  private String singleName;
 
   public static final String SERIALIZED_NAME_ADDRESS = "address";
   @SerializedName(SERIALIZED_NAME_ADDRESS)
@@ -90,7 +110,7 @@ public class DnsRecord {
   public static final String SERIALIZED_NAME_STRINGS = "strings";
   @SerializedName(SERIALIZED_NAME_STRINGS)
   @javax.annotation.Nullable
-  private List<String> strings = new ArrayList<>();
+  private List<String> strings;
 
   public static final String SERIALIZED_NAME_HOST = "host";
   @SerializedName(SERIALIZED_NAME_HOST)
@@ -105,7 +125,7 @@ public class DnsRecord {
   public static final String SERIALIZED_NAME_SERIAL = "serial";
   @SerializedName(SERIALIZED_NAME_SERIAL)
   @javax.annotation.Nullable
-  private Integer serial;
+  private Long serial;
 
   public static final String SERIALIZED_NAME_REFRESH = "refresh";
   @SerializedName(SERIALIZED_NAME_REFRESH)
@@ -130,22 +150,41 @@ public class DnsRecord {
   public DnsRecord() {
   }
 
-  public DnsRecord type(@javax.annotation.Nullable String type) {
+  public DnsRecord type(@javax.annotation.Nullable Integer type) {
     this.type = type;
     return this;
   }
 
   /**
-   * Get type
+   * Numeric DNS record type: 1 A, 2 NS, 5 CNAME, 6 SOA, 12 PTR, 15 MX, 16 TXT, 28 AAAA, 99 SPF.
    * @return type
    */
   @javax.annotation.Nullable
-  public String getType() {
+  public Integer getType() {
     return type;
   }
 
-  public void setType(@javax.annotation.Nullable String type) {
+  public void setType(@javax.annotation.Nullable Integer type) {
     this.type = type;
+  }
+
+
+  public DnsRecord dnsType(@javax.annotation.Nullable String dnsType) {
+    this.dnsType = dnsType;
+    return this;
+  }
+
+  /**
+   * Record type name, e.g. A, MX, TXT
+   * @return dnsType
+   */
+  @javax.annotation.Nullable
+  public String getDnsType() {
+    return dnsType;
+  }
+
+  public void setDnsType(@javax.annotation.Nullable String dnsType) {
+    this.dnsType = dnsType;
   }
 
 
@@ -184,6 +223,63 @@ public class DnsRecord {
 
   public void setTtl(@javax.annotation.Nullable Integer ttl) {
     this.ttl = ttl;
+  }
+
+
+  public DnsRecord rawText(@javax.annotation.Nullable String rawText) {
+    this.rawText = rawText;
+    return this;
+  }
+
+  /**
+   * The record in zone-file format
+   * @return rawText
+   */
+  @javax.annotation.Nullable
+  public String getRawText() {
+    return rawText;
+  }
+
+  public void setRawText(@javax.annotation.Nullable String rawText) {
+    this.rawText = rawText;
+  }
+
+
+  public DnsRecord rRsetType(@javax.annotation.Nullable Integer rRsetType) {
+    this.rRsetType = rRsetType;
+    return this;
+  }
+
+  /**
+   * Get rRsetType
+   * @return rRsetType
+   */
+  @javax.annotation.Nullable
+  public Integer getrRsetType() {
+    return rRsetType;
+  }
+
+  public void setrRsetType(@javax.annotation.Nullable Integer rRsetType) {
+    this.rRsetType = rRsetType;
+  }
+
+
+  public DnsRecord singleName(@javax.annotation.Nullable String singleName) {
+    this.singleName = singleName;
+    return this;
+  }
+
+  /**
+   * Target host for NS, CNAME and PTR records
+   * @return singleName
+   */
+  @javax.annotation.Nullable
+  public String getSingleName() {
+    return singleName;
+  }
+
+  public void setSingleName(@javax.annotation.Nullable String singleName) {
+    this.singleName = singleName;
   }
 
 
@@ -328,21 +424,21 @@ public class DnsRecord {
   }
 
 
-  public DnsRecord serial(@javax.annotation.Nullable Integer serial) {
+  public DnsRecord serial(@javax.annotation.Nullable Long serial) {
     this.serial = serial;
     return this;
   }
 
   /**
-   * Get serial
+   * SOA serial; values above 2^31 are common, so it is 64-bit
    * @return serial
    */
   @javax.annotation.Nullable
-  public Integer getSerial() {
+  public Long getSerial() {
     return serial;
   }
 
-  public void setSerial(@javax.annotation.Nullable Integer serial) {
+  public void setSerial(@javax.annotation.Nullable Long serial) {
     this.serial = serial;
   }
 
@@ -478,8 +574,12 @@ public class DnsRecord {
     }
     DnsRecord dnsRecord = (DnsRecord) o;
     return Objects.equals(this.type, dnsRecord.type) &&
+        Objects.equals(this.dnsType, dnsRecord.dnsType) &&
         Objects.equals(this.name, dnsRecord.name) &&
         Objects.equals(this.ttl, dnsRecord.ttl) &&
+        Objects.equals(this.rawText, dnsRecord.rawText) &&
+        Objects.equals(this.rRsetType, dnsRecord.rRsetType) &&
+        Objects.equals(this.singleName, dnsRecord.singleName) &&
         Objects.equals(this.address, dnsRecord.address) &&
         Objects.equals(this.priority, dnsRecord.priority) &&
         Objects.equals(this.exchange, dnsRecord.exchange) &&
@@ -497,7 +597,7 @@ public class DnsRecord {
 
   @Override
   public int hashCode() {
-    return Objects.hash(type, name, ttl, address, priority, exchange, target, strings, host, admin, serial, refresh, retry, expire, minimum, additionalProperties);
+    return Objects.hash(type, dnsType, name, ttl, rawText, rRsetType, singleName, address, priority, exchange, target, strings, host, admin, serial, refresh, retry, expire, minimum, additionalProperties);
   }
 
   @Override
@@ -505,8 +605,12 @@ public class DnsRecord {
     StringBuilder sb = new StringBuilder();
     sb.append("class DnsRecord {\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    dnsType: ").append(toIndentedString(dnsType)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    ttl: ").append(toIndentedString(ttl)).append("\n");
+    sb.append("    rawText: ").append(toIndentedString(rawText)).append("\n");
+    sb.append("    rRsetType: ").append(toIndentedString(rRsetType)).append("\n");
+    sb.append("    singleName: ").append(toIndentedString(singleName)).append("\n");
     sb.append("    address: ").append(toIndentedString(address)).append("\n");
     sb.append("    priority: ").append(toIndentedString(priority)).append("\n");
     sb.append("    exchange: ").append(toIndentedString(exchange)).append("\n");
@@ -543,8 +647,12 @@ public class DnsRecord {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("type");
+    openapiFields.add("dnsType");
     openapiFields.add("name");
     openapiFields.add("ttl");
+    openapiFields.add("rawText");
+    openapiFields.add("rRsetType");
+    openapiFields.add("singleName");
     openapiFields.add("address");
     openapiFields.add("priority");
     openapiFields.add("exchange");
@@ -575,11 +683,17 @@ public class DnsRecord {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) && !jsonObj.get("type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
+      if ((jsonObj.get("dnsType") != null && !jsonObj.get("dnsType").isJsonNull()) && !jsonObj.get("dnsType").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dnsType` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dnsType").toString()));
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+      }
+      if ((jsonObj.get("rawText") != null && !jsonObj.get("rawText").isJsonNull()) && !jsonObj.get("rawText").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `rawText` to be a primitive type in the JSON string but got `%s`", jsonObj.get("rawText").toString()));
+      }
+      if ((jsonObj.get("singleName") != null && !jsonObj.get("singleName").isJsonNull()) && !jsonObj.get("singleName").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `singleName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("singleName").toString()));
       }
       if ((jsonObj.get("address") != null && !jsonObj.get("address").isJsonNull()) && !jsonObj.get("address").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `address` to be a primitive type in the JSON string but got `%s`", jsonObj.get("address").toString()));

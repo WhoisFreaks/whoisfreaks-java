@@ -22,7 +22,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.SslApi;
 
 public class Example {
@@ -37,7 +40,7 @@ public class Example {
     //ApiKeyAuth.setApiKeyPrefix("Token");
 
     SslApi apiInstance = new SslApi(defaultClient);
-    String domainName = "domainName_example"; // String | 
+    String domainName = "whoisfreaks.com"; // String | 
     Boolean chain = false; // Boolean | 
     Boolean sslRaw = false; // Boolean | 
     String format = "json"; // String | 

@@ -1,6 +1,6 @@
 /*
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -280,7 +280,7 @@ public class IpReputationApi {
 
     /**
      * IP Reputation Lookup
-     * Threat intel for IP — VPN, proxy, Tor, bots. 1 credit.
+     * Threat intel for IP: VPN, proxy, Tor, bots. 1 credit.
      * @param ip  (required)
      * @return IpReputationResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -299,7 +299,7 @@ public class IpReputationApi {
 
     /**
      * IP Reputation Lookup
-     * Threat intel for IP — VPN, proxy, Tor, bots. 1 credit.
+     * Threat intel for IP: VPN, proxy, Tor, bots. 1 credit.
      * @param ip  (required)
      * @return ApiResponse&lt;IpReputationResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -319,7 +319,7 @@ public class IpReputationApi {
 
     /**
      * IP Reputation Lookup (asynchronously)
-     * Threat intel for IP — VPN, proxy, Tor, bots. 1 credit.
+     * Threat intel for IP: VPN, proxy, Tor, bots. 1 credit.
      * @param ip  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call

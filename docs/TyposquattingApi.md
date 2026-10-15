@@ -22,7 +22,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.TyposquattingApi;
 
 public class Example {
@@ -37,8 +40,8 @@ public class Example {
     //ApiKeyAuth.setApiKeyPrefix("Token");
 
     TyposquattingApi apiInstance = new TyposquattingApi(defaultClient);
-    String keyword = "keyword_example"; // String | 
-    String pattern = "pattern_example"; // String | 
+    String keyword = "whoisfreaks"; // String | 
+    String pattern = "whois*"; // String | 
     String pageToken = "pageToken_example"; // String | 
     try {
       TyposquattingResponse result = apiInstance.typosquatting(keyword, pattern, pageToken);

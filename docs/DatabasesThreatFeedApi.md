@@ -25,7 +25,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.DatabasesThreatFeedApi;
 
 public class Example {
@@ -40,7 +43,7 @@ public class Example {
     //ApiKeyAuth.setApiKeyPrefix("Token");
 
     DatabasesThreatFeedApi apiInstance = new DatabasesThreatFeedApi(defaultClient);
-    String date = "date_example"; // String | Feed date (yyyy-MM-dd); defaults to latest available
+    String date = "2026-10-01"; // String | Feed date (yyyy-MM-dd); omit for the full dump of the feed
     try {
       File result = apiInstance.downloadThreatFeedMalware(date);
       System.out.println(result);
@@ -59,7 +62,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **date** | **String**| Feed date (yyyy-MM-dd); defaults to latest available | [optional] |
+| **date** | **String**| Feed date (yyyy-MM-dd); omit for the full dump of the feed | [optional] |
 
 ### Return type
 
@@ -72,12 +75,13 @@ public class Example {
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/octet-stream
+ - **Accept**: application/octet-stream, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Malware threat feed as CSV (domain,threat_type,confidence,first_seen,last_seen,No_of_threat_matched_pivots) |  -  |
+| **4XX** | Error response (4XX) |  -  |
 
 <a id="downloadThreatFeedMalwareSample"></a>
 # **downloadThreatFeedMalwareSample**
@@ -92,7 +96,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.DatabasesThreatFeedApi;
 
 public class Example {
@@ -135,12 +142,13 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/octet-stream
+ - **Accept**: application/octet-stream, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Sample malware threat feed as CSV |  -  |
+| **4XX** | Error response (4XX) |  -  |
 
 <a id="downloadThreatFeedPhishing"></a>
 # **downloadThreatFeedPhishing**
@@ -155,7 +163,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.DatabasesThreatFeedApi;
 
 public class Example {
@@ -170,7 +181,7 @@ public class Example {
     //ApiKeyAuth.setApiKeyPrefix("Token");
 
     DatabasesThreatFeedApi apiInstance = new DatabasesThreatFeedApi(defaultClient);
-    String date = "date_example"; // String | Feed date (yyyy-MM-dd); defaults to latest available
+    String date = "2026-10-01"; // String | Feed date (yyyy-MM-dd); omit for the full dump of the feed
     try {
       File result = apiInstance.downloadThreatFeedPhishing(date);
       System.out.println(result);
@@ -189,7 +200,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **date** | **String**| Feed date (yyyy-MM-dd); defaults to latest available | [optional] |
+| **date** | **String**| Feed date (yyyy-MM-dd); omit for the full dump of the feed | [optional] |
 
 ### Return type
 
@@ -202,12 +213,13 @@ public class Example {
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/octet-stream
+ - **Accept**: application/octet-stream, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Phishing threat feed as CSV (domain,threat_type,confidence,first_seen,last_seen,No_of_threat_matched_pivots) |  -  |
+| **4XX** | Error response (4XX) |  -  |
 
 <a id="downloadThreatFeedPhishingSample"></a>
 # **downloadThreatFeedPhishingSample**
@@ -222,7 +234,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.DatabasesThreatFeedApi;
 
 public class Example {
@@ -265,12 +280,13 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/octet-stream
+ - **Accept**: application/octet-stream, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Sample phishing threat feed as CSV |  -  |
+| **4XX** | Error response (4XX) |  -  |
 
 <a id="downloadThreatFeedSpam"></a>
 # **downloadThreatFeedSpam**
@@ -285,7 +301,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.DatabasesThreatFeedApi;
 
 public class Example {
@@ -300,7 +319,7 @@ public class Example {
     //ApiKeyAuth.setApiKeyPrefix("Token");
 
     DatabasesThreatFeedApi apiInstance = new DatabasesThreatFeedApi(defaultClient);
-    String date = "date_example"; // String | Feed date (yyyy-MM-dd); defaults to latest available
+    String date = "2026-10-01"; // String | Feed date (yyyy-MM-dd); omit for the full dump of the feed
     try {
       File result = apiInstance.downloadThreatFeedSpam(date);
       System.out.println(result);
@@ -319,7 +338,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **date** | **String**| Feed date (yyyy-MM-dd); defaults to latest available | [optional] |
+| **date** | **String**| Feed date (yyyy-MM-dd); omit for the full dump of the feed | [optional] |
 
 ### Return type
 
@@ -332,12 +351,13 @@ public class Example {
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/octet-stream
+ - **Accept**: application/octet-stream, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Spam threat feed as CSV (domain,threat_type,confidence,first_seen,last_seen,No_of_threat_matched_pivots) |  -  |
+| **4XX** | Error response (4XX) |  -  |
 
 <a id="downloadThreatFeedSpamSample"></a>
 # **downloadThreatFeedSpamSample**
@@ -352,7 +372,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.DatabasesThreatFeedApi;
 
 public class Example {
@@ -395,10 +418,11 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/octet-stream
+ - **Accept**: application/octet-stream, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Sample spam threat feed as CSV |  -  |
+| **4XX** | Error response (4XX) |  -  |
 

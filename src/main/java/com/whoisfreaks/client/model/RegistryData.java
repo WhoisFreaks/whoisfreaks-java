@@ -1,6 +1,6 @@
 /*
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -96,17 +96,17 @@ public class RegistryData {
   public static final String SERIALIZED_NAME_NAME_SERVERS = "name_servers";
   @SerializedName(SERIALIZED_NAME_NAME_SERVERS)
   @javax.annotation.Nullable
-  private List<String> nameServers = new ArrayList<>();
+  private List<String> nameServers;
 
   public static final String SERIALIZED_NAME_DOMAIN_STATUS = "domain_status";
   @SerializedName(SERIALIZED_NAME_DOMAIN_STATUS)
   @javax.annotation.Nullable
-  private List<String> domainStatus = new ArrayList<>();
+  private List<String> domainStatus;
 
-  public static final String SERIALIZED_NAME_WHOIS_RAW_DOMAIN = "whois_raw_domain";
-  @SerializedName(SERIALIZED_NAME_WHOIS_RAW_DOMAIN)
+  public static final String SERIALIZED_NAME_WHOIS_RAW_REGISTERY = "whois_raw_registery";
+  @SerializedName(SERIALIZED_NAME_WHOIS_RAW_REGISTERY)
   @javax.annotation.Nullable
-  private String whoisRawDomain;
+  private String whoisRawRegistery;
 
   public RegistryData() {
   }
@@ -317,22 +317,22 @@ public class RegistryData {
   }
 
 
-  public RegistryData whoisRawDomain(@javax.annotation.Nullable String whoisRawDomain) {
-    this.whoisRawDomain = whoisRawDomain;
+  public RegistryData whoisRawRegistery(@javax.annotation.Nullable String whoisRawRegistery) {
+    this.whoisRawRegistery = whoisRawRegistery;
     return this;
   }
 
   /**
-   * Get whoisRawDomain
-   * @return whoisRawDomain
+   * Raw registry WHOIS text (field name spelled as the API returns it)
+   * @return whoisRawRegistery
    */
   @javax.annotation.Nullable
-  public String getWhoisRawDomain() {
-    return whoisRawDomain;
+  public String getWhoisRawRegistery() {
+    return whoisRawRegistery;
   }
 
-  public void setWhoisRawDomain(@javax.annotation.Nullable String whoisRawDomain) {
-    this.whoisRawDomain = whoisRawDomain;
+  public void setWhoisRawRegistery(@javax.annotation.Nullable String whoisRawRegistery) {
+    this.whoisRawRegistery = whoisRawRegistery;
   }
 
   /**
@@ -400,13 +400,13 @@ public class RegistryData {
         Objects.equals(this.domainRegistrar, registryData.domainRegistrar) &&
         Objects.equals(this.nameServers, registryData.nameServers) &&
         Objects.equals(this.domainStatus, registryData.domainStatus) &&
-        Objects.equals(this.whoisRawDomain, registryData.whoisRawDomain)&&
+        Objects.equals(this.whoisRawRegistery, registryData.whoisRawRegistery)&&
         Objects.equals(this.additionalProperties, registryData.additionalProperties);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(domainName, queryTime, whoisServer, domainRegistered, createDate, updateDate, expiryDate, domainRegistrar, nameServers, domainStatus, whoisRawDomain, additionalProperties);
+    return Objects.hash(domainName, queryTime, whoisServer, domainRegistered, createDate, updateDate, expiryDate, domainRegistrar, nameServers, domainStatus, whoisRawRegistery, additionalProperties);
   }
 
   @Override
@@ -423,7 +423,7 @@ public class RegistryData {
     sb.append("    domainRegistrar: ").append(toIndentedString(domainRegistrar)).append("\n");
     sb.append("    nameServers: ").append(toIndentedString(nameServers)).append("\n");
     sb.append("    domainStatus: ").append(toIndentedString(domainStatus)).append("\n");
-    sb.append("    whoisRawDomain: ").append(toIndentedString(whoisRawDomain)).append("\n");
+    sb.append("    whoisRawRegistery: ").append(toIndentedString(whoisRawRegistery)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -457,7 +457,7 @@ public class RegistryData {
     openapiFields.add("domain_registrar");
     openapiFields.add("name_servers");
     openapiFields.add("domain_status");
-    openapiFields.add("whois_raw_domain");
+    openapiFields.add("whois_raw_registery");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -505,8 +505,8 @@ public class RegistryData {
       if (jsonObj.get("domain_status") != null && !jsonObj.get("domain_status").isJsonNull() && !jsonObj.get("domain_status").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `domain_status` to be an array in the JSON string but got `%s`", jsonObj.get("domain_status").toString()));
       }
-      if ((jsonObj.get("whois_raw_domain") != null && !jsonObj.get("whois_raw_domain").isJsonNull()) && !jsonObj.get("whois_raw_domain").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `whois_raw_domain` to be a primitive type in the JSON string but got `%s`", jsonObj.get("whois_raw_domain").toString()));
+      if ((jsonObj.get("whois_raw_registery") != null && !jsonObj.get("whois_raw_registery").isJsonNull()) && !jsonObj.get("whois_raw_registery").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `whois_raw_registery` to be a primitive type in the JSON string but got `%s`", jsonObj.get("whois_raw_registery").toString()));
       }
   }
 

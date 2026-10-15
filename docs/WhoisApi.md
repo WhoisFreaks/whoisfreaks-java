@@ -25,7 +25,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.WhoisApi;
 
 public class Example {
@@ -84,9 +87,11 @@ public class Example {
 
 <a id="whoisHistory"></a>
 # **whoisHistory**
-> WhoisHistoricalResponse whoisHistory(domainName, page, format)
+> WhoisHistoricalResponse whoisHistory(domainName, format)
 
 Historical WHOIS records for a domain
+
+Every WHOIS record captured for the domain since 1986, in one response (no pagination). Cost 2 credits.
 
 ### Example
 ```java
@@ -95,7 +100,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.WhoisApi;
 
 public class Example {
@@ -110,11 +118,10 @@ public class Example {
     //ApiKeyAuth.setApiKeyPrefix("Token");
 
     WhoisApi apiInstance = new WhoisApi(defaultClient);
-    String domainName = "domainName_example"; // String | Domain to fetch historical WHOIS records for
-    Integer page = 56; // Integer | Page number
+    String domainName = "whoisfreaks.com"; // String | Domain to fetch historical WHOIS records for
     String format = "json"; // String | 
     try {
-      WhoisHistoricalResponse result = apiInstance.whoisHistory(domainName, page, format);
+      WhoisHistoricalResponse result = apiInstance.whoisHistory(domainName, format);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling WhoisApi#whoisHistory");
@@ -132,7 +139,6 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **domainName** | **String**| Domain to fetch historical WHOIS records for | |
-| **page** | **Integer**| Page number | [optional] |
 | **format** | **String**|  | [optional] [enum: json, xml] |
 
 ### Return type
@@ -168,7 +174,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.WhoisApi;
 
 public class Example {
@@ -240,7 +249,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.WhoisApi;
 
 public class Example {
@@ -255,8 +267,8 @@ public class Example {
     //ApiKeyAuth.setApiKeyPrefix("Token");
 
     WhoisApi apiInstance = new WhoisApi(defaultClient);
-    String keyword = "keyword_example"; // String | Keyword to search across WHOIS records
-    Integer page = 56; // Integer | Page number
+    String keyword = "whoisfreaks"; // String | Keyword to search across WHOIS records
+    Integer page = 1; // Integer | Page number
     String format = "json"; // String | 
     try {
       ReverseWhoisResponse result = apiInstance.whoisReverse(keyword, page, format);

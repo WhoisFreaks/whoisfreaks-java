@@ -22,7 +22,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.SubdomainsApi;
 
 public class Example {
@@ -37,9 +40,9 @@ public class Example {
     //ApiKeyAuth.setApiKeyPrefix("Token");
 
     SubdomainsApi apiInstance = new SubdomainsApi(defaultClient);
-    String domain = "domain_example"; // String | 
-    LocalDate after = LocalDate.now(); // LocalDate | 
-    LocalDate before = LocalDate.now(); // LocalDate | 
+    String domain = "whoisfreaks.com"; // String | 
+    LocalDate after = LocalDate.parse("2026-01-01"); // LocalDate | 
+    LocalDate before = LocalDate.parse("2026-10-01"); // LocalDate | 
     String status = "active"; // String | 
     Integer page = 1; // Integer | 
     String format = "json"; // String | 

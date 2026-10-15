@@ -25,7 +25,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.DnsApi;
 
 public class Example {
@@ -99,7 +102,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.DnsApi;
 
 public class Example {
@@ -114,7 +120,7 @@ public class Example {
     //ApiKeyAuth.setApiKeyPrefix("Token");
 
     DnsApi apiInstance = new DnsApi(defaultClient);
-    String domainName = "domainName_example"; // String | 
+    String domainName = "whoisfreaks.com"; // String | 
     String type = "all"; // String | 
     Integer page = 1; // Integer | 
     String format = "json"; // String | 
@@ -175,7 +181,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.DnsApi;
 
 public class Example {
@@ -191,8 +200,8 @@ public class Example {
 
     DnsApi apiInstance = new DnsApi(defaultClient);
     String type = "all"; // String | all or comma-separated: A,MX,NS,TXT,SOA,SPF,AAAA,CNAME
-    String domainName = "domainName_example"; // String | 
-    String ipAddress = "ipAddress_example"; // String | Use for PTR lookups
+    String domainName = "whoisfreaks.com"; // String | 
+    String ipAddress = "8.8.8.8"; // String | Use for PTR lookups
     String format = "json"; // String | 
     try {
       DnsResponse result = apiInstance.dnsLive(type, domainName, ipAddress, format);
@@ -252,7 +261,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.DnsApi;
 
 public class Example {
@@ -267,7 +279,7 @@ public class Example {
     //ApiKeyAuth.setApiKeyPrefix("Token");
 
     DnsApi apiInstance = new DnsApi(defaultClient);
-    String value = "value_example"; // String | IP, CIDR, or record value
+    String value = "8.8.8.8"; // String | IP, CIDR, or record value
     String type = "a"; // String | 
     Boolean exact = true; // Boolean | 
     Integer page = 1; // Integer | 

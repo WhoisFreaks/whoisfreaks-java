@@ -1,6 +1,6 @@
 /*
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -68,17 +68,17 @@ public class SslExtensionsInfo {
   public static final String SERIALIZED_NAME_KEY_USAGES = "keyUsages";
   @SerializedName(SERIALIZED_NAME_KEY_USAGES)
   @javax.annotation.Nullable
-  private List<String> keyUsages = new ArrayList<>();
+  private List<String> keyUsages;
 
   public static final String SERIALIZED_NAME_EXTENDED_KEY_USAGES = "extendedKeyUsages";
   @SerializedName(SERIALIZED_NAME_EXTENDED_KEY_USAGES)
   @javax.annotation.Nullable
-  private List<String> extendedKeyUsages = new ArrayList<>();
+  private List<String> extendedKeyUsages;
 
   public static final String SERIALIZED_NAME_CRL_DISTRIBUTION_POINTS = "crlDistributionPoints";
   @SerializedName(SERIALIZED_NAME_CRL_DISTRIBUTION_POINTS)
   @javax.annotation.Nullable
-  private List<String> crlDistributionPoints = new ArrayList<>();
+  private List<String> crlDistributionPoints;
 
   public static final String SERIALIZED_NAME_AUTHORITY_INFO_ACCESS = "authorityInfoAccess";
   @SerializedName(SERIALIZED_NAME_AUTHORITY_INFO_ACCESS)
@@ -93,7 +93,7 @@ public class SslExtensionsInfo {
   public static final String SERIALIZED_NAME_CERTIFICATE_POLICIES = "certificatePolicies";
   @SerializedName(SERIALIZED_NAME_CERTIFICATE_POLICIES)
   @javax.annotation.Nullable
-  private List<SslCertificatePolicy> certificatePolicies = new ArrayList<>();
+  private List<SslCertificatePolicy> certificatePolicies;
 
   public SslExtensionsInfo() {
   }

@@ -28,7 +28,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.DatabasesNewlyRegisteredApi;
 
 public class Example {
@@ -44,8 +47,8 @@ public class Example {
 
     DatabasesNewlyRegisteredApi apiInstance = new DatabasesNewlyRegisteredApi(defaultClient);
     Boolean whois = true; // Boolean | 
-    LocalDate date = LocalDate.now(); // LocalDate | yyyy-MM-dd; omit for latest
-    String tlds = "tlds_example"; // String | 
+    LocalDate date = LocalDate.parse("2026-10-01"); // LocalDate | yyyy-MM-dd; omit for latest
+    String tlds = "com,net"; // String | 
     try {
       File result = apiInstance.dbNewlyCctld(whois, date, tlds);
       System.out.println(result);
@@ -102,7 +105,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.DatabasesNewlyRegisteredApi;
 
 public class Example {
@@ -117,7 +123,7 @@ public class Example {
     //ApiKeyAuth.setApiKeyPrefix("Token");
 
     DatabasesNewlyRegisteredApi apiInstance = new DatabasesNewlyRegisteredApi(defaultClient);
-    LocalDate date = LocalDate.now(); // LocalDate | yyyy-MM-dd; omit for latest
+    LocalDate date = LocalDate.parse("2026-10-01"); // LocalDate | yyyy-MM-dd; omit for latest
     try {
       File result = apiInstance.dbNewlyCctldCleaned(date);
       System.out.println(result);
@@ -172,7 +178,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.DatabasesNewlyRegisteredApi;
 
 public class Example {
@@ -187,8 +196,8 @@ public class Example {
     //ApiKeyAuth.setApiKeyPrefix("Token");
 
     DatabasesNewlyRegisteredApi apiInstance = new DatabasesNewlyRegisteredApi(defaultClient);
-    LocalDate date = LocalDate.now(); // LocalDate | yyyy-MM-dd; omit for latest
-    String tlds = "tlds_example"; // String | 
+    LocalDate date = LocalDate.parse("2026-10-01"); // LocalDate | yyyy-MM-dd; omit for latest
+    String tlds = "com,net"; // String | 
     try {
       List<String> result = apiInstance.dbNewlyCctldJson(date, tlds);
       System.out.println(result);
@@ -244,7 +253,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.DatabasesNewlyRegisteredApi;
 
 public class Example {
@@ -259,7 +271,7 @@ public class Example {
     //ApiKeyAuth.setApiKeyPrefix("Token");
 
     DatabasesNewlyRegisteredApi apiInstance = new DatabasesNewlyRegisteredApi(defaultClient);
-    LocalDate date = LocalDate.now(); // LocalDate | yyyy-MM-dd; omit for latest
+    LocalDate date = LocalDate.parse("2026-10-01"); // LocalDate | yyyy-MM-dd; omit for latest
     try {
       File result = apiInstance.dbNewlyDns(date);
       System.out.println(result);
@@ -314,7 +326,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.DatabasesNewlyRegisteredApi;
 
 public class Example {
@@ -330,8 +345,8 @@ public class Example {
 
     DatabasesNewlyRegisteredApi apiInstance = new DatabasesNewlyRegisteredApi(defaultClient);
     Boolean whois = true; // Boolean | 
-    LocalDate date = LocalDate.now(); // LocalDate | yyyy-MM-dd; omit for latest
-    String tlds = "tlds_example"; // String | 
+    LocalDate date = LocalDate.parse("2026-10-01"); // LocalDate | yyyy-MM-dd; omit for latest
+    String tlds = "com,net"; // String | 
     try {
       File result = apiInstance.dbNewlyGtld(whois, date, tlds);
       System.out.println(result);
@@ -388,7 +403,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.DatabasesNewlyRegisteredApi;
 
 public class Example {
@@ -403,7 +421,7 @@ public class Example {
     //ApiKeyAuth.setApiKeyPrefix("Token");
 
     DatabasesNewlyRegisteredApi apiInstance = new DatabasesNewlyRegisteredApi(defaultClient);
-    LocalDate date = LocalDate.now(); // LocalDate | yyyy-MM-dd; omit for latest
+    LocalDate date = LocalDate.parse("2026-10-01"); // LocalDate | yyyy-MM-dd; omit for latest
     try {
       File result = apiInstance.dbNewlyGtldCleaned(date);
       System.out.println(result);
@@ -458,7 +476,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.DatabasesNewlyRegisteredApi;
 
 public class Example {
@@ -473,8 +494,8 @@ public class Example {
     //ApiKeyAuth.setApiKeyPrefix("Token");
 
     DatabasesNewlyRegisteredApi apiInstance = new DatabasesNewlyRegisteredApi(defaultClient);
-    LocalDate date = LocalDate.now(); // LocalDate | yyyy-MM-dd; omit for latest
-    String tlds = "tlds_example"; // String | 
+    LocalDate date = LocalDate.parse("2026-10-01"); // LocalDate | yyyy-MM-dd; omit for latest
+    String tlds = "com,net"; // String | 
     try {
       List<String> result = apiInstance.dbNewlyGtldJson(date, tlds);
       System.out.println(result);

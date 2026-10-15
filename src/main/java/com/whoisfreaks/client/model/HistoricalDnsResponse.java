@@ -1,6 +1,6 @@
 /*
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -49,7 +49,7 @@ import java.util.Set;
 import com.whoisfreaks.client.JSON;
 
 /**
- * Note: &#39;currenPage&#39; spelling matches the API.
+ * HistoricalDnsResponse
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.11.0")
 public class HistoricalDnsResponse {
@@ -58,20 +58,20 @@ public class HistoricalDnsResponse {
   @javax.annotation.Nullable
   private Integer totalPages;
 
-  public static final String SERIALIZED_NAME_CURREN_PAGE = "currenPage";
-  @SerializedName(SERIALIZED_NAME_CURREN_PAGE)
+  public static final String SERIALIZED_NAME_CURRENT_PAGE = "currentPage";
+  @SerializedName(SERIALIZED_NAME_CURRENT_PAGE)
   @javax.annotation.Nullable
-  private Integer currenPage;
+  private Integer currentPage;
 
   public static final String SERIALIZED_NAME_TOTAL_RECORDS = "totalRecords";
   @SerializedName(SERIALIZED_NAME_TOTAL_RECORDS)
   @javax.annotation.Nullable
   private Integer totalRecords;
 
-  public static final String SERIALIZED_NAME_HISTORICAL_DNS = "historicalDns";
-  @SerializedName(SERIALIZED_NAME_HISTORICAL_DNS)
+  public static final String SERIALIZED_NAME_HISTORICAL_DNS_RECORDS = "historicalDnsRecords";
+  @SerializedName(SERIALIZED_NAME_HISTORICAL_DNS_RECORDS)
   @javax.annotation.Nullable
-  private List<DnsResponse> historicalDns = new ArrayList<>();
+  private List<DnsResponse> historicalDnsRecords;
 
   public HistoricalDnsResponse() {
   }
@@ -95,22 +95,22 @@ public class HistoricalDnsResponse {
   }
 
 
-  public HistoricalDnsResponse currenPage(@javax.annotation.Nullable Integer currenPage) {
-    this.currenPage = currenPage;
+  public HistoricalDnsResponse currentPage(@javax.annotation.Nullable Integer currentPage) {
+    this.currentPage = currentPage;
     return this;
   }
 
   /**
-   * Get currenPage
-   * @return currenPage
+   * Get currentPage
+   * @return currentPage
    */
   @javax.annotation.Nullable
-  public Integer getCurrenPage() {
-    return currenPage;
+  public Integer getCurrentPage() {
+    return currentPage;
   }
 
-  public void setCurrenPage(@javax.annotation.Nullable Integer currenPage) {
-    this.currenPage = currenPage;
+  public void setCurrentPage(@javax.annotation.Nullable Integer currentPage) {
+    this.currentPage = currentPage;
   }
 
 
@@ -133,30 +133,30 @@ public class HistoricalDnsResponse {
   }
 
 
-  public HistoricalDnsResponse historicalDns(@javax.annotation.Nullable List<DnsResponse> historicalDns) {
-    this.historicalDns = historicalDns;
+  public HistoricalDnsResponse historicalDnsRecords(@javax.annotation.Nullable List<DnsResponse> historicalDnsRecords) {
+    this.historicalDnsRecords = historicalDnsRecords;
     return this;
   }
 
-  public HistoricalDnsResponse addHistoricalDnsItem(DnsResponse historicalDnsItem) {
-    if (this.historicalDns == null) {
-      this.historicalDns = new ArrayList<>();
+  public HistoricalDnsResponse addHistoricalDnsRecordsItem(DnsResponse historicalDnsRecordsItem) {
+    if (this.historicalDnsRecords == null) {
+      this.historicalDnsRecords = new ArrayList<>();
     }
-    this.historicalDns.add(historicalDnsItem);
+    this.historicalDnsRecords.add(historicalDnsRecordsItem);
     return this;
   }
 
   /**
-   * Get historicalDns
-   * @return historicalDns
+   * Get historicalDnsRecords
+   * @return historicalDnsRecords
    */
   @javax.annotation.Nullable
-  public List<DnsResponse> getHistoricalDns() {
-    return historicalDns;
+  public List<DnsResponse> getHistoricalDnsRecords() {
+    return historicalDnsRecords;
   }
 
-  public void setHistoricalDns(@javax.annotation.Nullable List<DnsResponse> historicalDns) {
-    this.historicalDns = historicalDns;
+  public void setHistoricalDnsRecords(@javax.annotation.Nullable List<DnsResponse> historicalDnsRecords) {
+    this.historicalDnsRecords = historicalDnsRecords;
   }
 
   /**
@@ -215,15 +215,15 @@ public class HistoricalDnsResponse {
     }
     HistoricalDnsResponse historicalDnsResponse = (HistoricalDnsResponse) o;
     return Objects.equals(this.totalPages, historicalDnsResponse.totalPages) &&
-        Objects.equals(this.currenPage, historicalDnsResponse.currenPage) &&
+        Objects.equals(this.currentPage, historicalDnsResponse.currentPage) &&
         Objects.equals(this.totalRecords, historicalDnsResponse.totalRecords) &&
-        Objects.equals(this.historicalDns, historicalDnsResponse.historicalDns)&&
+        Objects.equals(this.historicalDnsRecords, historicalDnsResponse.historicalDnsRecords)&&
         Objects.equals(this.additionalProperties, historicalDnsResponse.additionalProperties);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(totalPages, currenPage, totalRecords, historicalDns, additionalProperties);
+    return Objects.hash(totalPages, currentPage, totalRecords, historicalDnsRecords, additionalProperties);
   }
 
   @Override
@@ -231,9 +231,9 @@ public class HistoricalDnsResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class HistoricalDnsResponse {\n");
     sb.append("    totalPages: ").append(toIndentedString(totalPages)).append("\n");
-    sb.append("    currenPage: ").append(toIndentedString(currenPage)).append("\n");
+    sb.append("    currentPage: ").append(toIndentedString(currentPage)).append("\n");
     sb.append("    totalRecords: ").append(toIndentedString(totalRecords)).append("\n");
-    sb.append("    historicalDns: ").append(toIndentedString(historicalDns)).append("\n");
+    sb.append("    historicalDnsRecords: ").append(toIndentedString(historicalDnsRecords)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -258,9 +258,9 @@ public class HistoricalDnsResponse {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("totalPages");
-    openapiFields.add("currenPage");
+    openapiFields.add("currentPage");
     openapiFields.add("totalRecords");
-    openapiFields.add("historicalDns");
+    openapiFields.add("historicalDnsRecords");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -280,8 +280,8 @@ public class HistoricalDnsResponse {
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the optional json data is an array if present
-      if (jsonObj.get("historicalDns") != null && !jsonObj.get("historicalDns").isJsonNull() && !jsonObj.get("historicalDns").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `historicalDns` to be an array in the JSON string but got `%s`", jsonObj.get("historicalDns").toString()));
+      if (jsonObj.get("historicalDnsRecords") != null && !jsonObj.get("historicalDnsRecords").isJsonNull() && !jsonObj.get("historicalDnsRecords").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `historicalDnsRecords` to be an array in the JSON string but got `%s`", jsonObj.get("historicalDnsRecords").toString()));
       }
   }
 

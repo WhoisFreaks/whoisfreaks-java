@@ -1,6 +1,6 @@
 /*
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -155,12 +155,12 @@ public class WhoisHistoricalItem {
   public static final String SERIALIZED_NAME_NAME_SERVERS = "name_servers";
   @SerializedName(SERIALIZED_NAME_NAME_SERVERS)
   @javax.annotation.Nullable
-  private List<String> nameServers = new ArrayList<>();
+  private List<String> nameServers;
 
   public static final String SERIALIZED_NAME_DOMAIN_STATUS = "domain_status";
   @SerializedName(SERIALIZED_NAME_DOMAIN_STATUS)
   @javax.annotation.Nullable
-  private List<String> domainStatus = new ArrayList<>();
+  private List<String> domainStatus;
 
   public static final String SERIALIZED_NAME_WHOIS_RAW_DOMAIN = "whois_raw_domain";
   @SerializedName(SERIALIZED_NAME_WHOIS_RAW_DOMAIN)

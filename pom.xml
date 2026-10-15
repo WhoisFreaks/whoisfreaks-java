@@ -4,19 +4,19 @@
     <groupId>com.whoisfreaks</groupId>
     <artifactId>whoisfreaks</artifactId>
     <packaging>jar</packaging>
-    <name>whoisfreaks</name>
-    <version>0.21.0</version>
-    <url>https://github.com/openapitools/openapi-generator</url>
-    <description>OpenAPI Java</description>
+    <name>WhoisFreaks Java SDK</name>
+    <version>0.23.2</version>
+    <url>https://github.com/WhoisFreaks/whoisfreaks-java</url>
+    <description>Java WHOIS API client: live, historical, reverse and bulk WHOIS, DNS lookup, domain availability, typosquatting</description>
     <scm>
-        <connection>scm:git:git@github.com:openapitools/openapi-generator.git</connection>
-        <developerConnection>scm:git:git@github.com:openapitools/openapi-generator.git</developerConnection>
-        <url>https://github.com/openapitools/openapi-generator</url>
+        <connection>scm:git:https://github.com/WhoisFreaks/whoisfreaks-java.git</connection>
+        <developerConnection>scm:git:git@github.com:WhoisFreaks/whoisfreaks-java.git</developerConnection>
+        <url>https://github.com/WhoisFreaks/whoisfreaks-java</url>
     </scm>
 
     <licenses>
         <license>
-            <name>Unlicense</name>
+            <name>MIT</name>
             <url>https://opensource.org/licenses/MIT</url>
             <distribution>repo</distribution>
         </license>
@@ -24,22 +24,20 @@
 
     <developers>
         <developer>
-            <name>OpenAPI-Generator Contributors</name>
-            <email>team@openapitools.org</email>
-            <organization>OpenAPITools.org</organization>
-            <organizationUrl>http://openapitools.org</organizationUrl>
+            <name>WhoisFreaks</name>
+            <email>support@whoisfreaks.com</email>
+            <organization>WhoisFreaks</organization>
+            <organizationUrl>https://whoisfreaks.com</organizationUrl>
         </developer>
     </developers>
 
     <build>
         <plugins>
-<!-- Build plugins required for Maven Central publishing.
-     Merge these into the generated pom.xml <build><plugins> block
-     (done automatically by scripts/postprocess.sh java|kotlin). -->
     <plugin>
       <groupId>org.sonatype.central</groupId>
       <artifactId>central-publishing-maven-plugin</artifactId>
-      <version>0.5.0</version>
+      <!-- 0.5.0 left Maven 3.10's maven-metadata-local.xml in the bundle, which Central rejects -->
+      <version>0.12.0</version>
       <extensions>true</extensions>
       <configuration>
         <publishingServerId>central</publishingServerId>
@@ -58,23 +56,6 @@
         </execution>
       </executions>
     </plugin>
-    <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-source-plugin</artifactId>
-      <version>3.3.1</version>
-      <executions>
-        <execution><id>attach-sources</id><goals><goal>jar-no-fork</goal></goals></execution>
-      </executions>
-    </plugin>
-    <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-javadoc-plugin</artifactId>
-      <version>3.11.2</version>
-      <executions>
-        <execution><id>attach-javadocs</id><goals><goal>jar</goal></goals></execution>
-      </executions>
-    </plugin>
-
            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>

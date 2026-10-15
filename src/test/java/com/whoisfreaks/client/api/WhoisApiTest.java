@@ -1,6 +1,6 @@
 /*
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -54,14 +54,15 @@ public class WhoisApiTest {
     /**
      * Historical WHOIS records for a domain
      *
+     * Every WHOIS record captured for the domain since 1986, in one response (no pagination). Cost 2 credits.
+     *
      * @throws ApiException if the Api call fails
      */
     @Test
     public void whoisHistoryTest() throws ApiException {
         String domainName = null;
-        Integer page = null;
         String format = null;
-        WhoisHistoricalResponse response = api.whoisHistory(domainName, page, format);
+        WhoisHistoricalResponse response = api.whoisHistory(domainName, format);
         // TODO: test validations
     }
 

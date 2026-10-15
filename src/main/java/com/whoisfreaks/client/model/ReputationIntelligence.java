@@ -1,6 +1,6 @@
 /*
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -66,12 +66,12 @@ public class ReputationIntelligence {
   public static final String SERIALIZED_NAME_RELATED_IOCS = "related_iocs";
   @SerializedName(SERIALIZED_NAME_RELATED_IOCS)
   @javax.annotation.Nullable
-  private List<RelatedIoc> relatedIocs = new ArrayList<>();
+  private List<RelatedIoc> relatedIocs;
 
   public static final String SERIALIZED_NAME_FEED_TAGS = "feed_tags";
   @SerializedName(SERIALIZED_NAME_FEED_TAGS)
   @javax.annotation.Nullable
-  private List<String> feedTags = new ArrayList<>();
+  private List<String> feedTags;
 
   public static final String SERIALIZED_NAME_STIX_PATTERN = "stix_pattern";
   @SerializedName(SERIALIZED_NAME_STIX_PATTERN)

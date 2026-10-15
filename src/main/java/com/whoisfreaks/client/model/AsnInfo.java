@@ -1,6 +1,6 @@
 /*
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -111,22 +111,22 @@ public class AsnInfo {
   public static final String SERIALIZED_NAME_ROUTES = "routes";
   @SerializedName(SERIALIZED_NAME_ROUTES)
   @javax.annotation.Nullable
-  private List<String> routes = new ArrayList<>();
+  private List<String> routes;
 
   public static final String SERIALIZED_NAME_DOWNSTREAMS = "downstreams";
   @SerializedName(SERIALIZED_NAME_DOWNSTREAMS)
   @javax.annotation.Nullable
-  private List<AsnPeer> downstreams = new ArrayList<>();
+  private List<AsnPeer> downstreams;
 
   public static final String SERIALIZED_NAME_UPSTREAMS = "upstreams";
   @SerializedName(SERIALIZED_NAME_UPSTREAMS)
   @javax.annotation.Nullable
-  private List<AsnPeer> upstreams = new ArrayList<>();
+  private List<AsnPeer> upstreams;
 
   public static final String SERIALIZED_NAME_PEERS = "peers";
   @SerializedName(SERIALIZED_NAME_PEERS)
   @javax.annotation.Nullable
-  private List<AsnPeer> peers = new ArrayList<>();
+  private List<AsnPeer> peers;
 
   public static final String SERIALIZED_NAME_WHOIS_RESPONSE = "whois_response";
   @SerializedName(SERIALIZED_NAME_WHOIS_RESPONSE)

@@ -25,7 +25,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.DatabasesIpGeolocationApi;
 
 public class Example {
@@ -40,7 +43,7 @@ public class Example {
     //ApiKeyAuth.setApiKeyPrefix("Token");
 
     DatabasesIpGeolocationApi apiInstance = new DatabasesIpGeolocationApi(defaultClient);
-    LocalDate date = LocalDate.now(); // LocalDate | 
+    LocalDate date = LocalDate.parse("2026-10-01"); // LocalDate | 
     try {
       File result = apiInstance.dbIpCity(date);
       System.out.println(result);
@@ -95,7 +98,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.DatabasesIpGeolocationApi;
 
 public class Example {
@@ -161,7 +167,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.DatabasesIpGeolocationApi;
 
 public class Example {
@@ -176,7 +185,7 @@ public class Example {
     //ApiKeyAuth.setApiKeyPrefix("Token");
 
     DatabasesIpGeolocationApi apiInstance = new DatabasesIpGeolocationApi(defaultClient);
-    LocalDate date = LocalDate.now(); // LocalDate | 
+    LocalDate date = LocalDate.parse("2026-10-01"); // LocalDate | 
     try {
       File result = apiInstance.dbIpCountry(date);
       System.out.println(result);
@@ -231,7 +240,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.DatabasesIpGeolocationApi;
 
 public class Example {

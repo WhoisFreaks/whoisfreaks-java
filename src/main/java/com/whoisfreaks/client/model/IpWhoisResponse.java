@@ -1,6 +1,6 @@
 /*
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -95,7 +95,7 @@ public class IpWhoisResponse {
   public static final String SERIALIZED_NAME_INET_NUMS = "inet_nums";
   @SerializedName(SERIALIZED_NAME_INET_NUMS)
   @javax.annotation.Nullable
-  private List<InetNum> inetNums = new ArrayList<>();
+  private List<InetNum> inetNums;
 
   public static final String SERIALIZED_NAME_ORGANIZATION = "organization";
   @SerializedName(SERIALIZED_NAME_ORGANIZATION)
@@ -110,22 +110,22 @@ public class IpWhoisResponse {
   public static final String SERIALIZED_NAME_ADMINISTRATIVE_CONTACTS = "administrative_contacts";
   @SerializedName(SERIALIZED_NAME_ADMINISTRATIVE_CONTACTS)
   @javax.annotation.Nullable
-  private List<WhoisPerson> administrativeContacts = new ArrayList<>();
+  private List<WhoisPerson> administrativeContacts;
 
   public static final String SERIALIZED_NAME_TECHNICAL_CONTACTS = "technical_contacts";
   @SerializedName(SERIALIZED_NAME_TECHNICAL_CONTACTS)
   @javax.annotation.Nullable
-  private List<WhoisPerson> technicalContacts = new ArrayList<>();
+  private List<WhoisPerson> technicalContacts;
 
   public static final String SERIALIZED_NAME_ABUSE_CONTACTS = "abuse_contacts";
   @SerializedName(SERIALIZED_NAME_ABUSE_CONTACTS)
   @javax.annotation.Nullable
-  private List<WhoisPerson> abuseContacts = new ArrayList<>();
+  private List<WhoisPerson> abuseContacts;
 
   public static final String SERIALIZED_NAME_ROUTES = "routes";
   @SerializedName(SERIALIZED_NAME_ROUTES)
   @javax.annotation.Nullable
-  private List<Route> routes = new ArrayList<>();
+  private List<Route> routes;
 
   public IpWhoisResponse() {
   }

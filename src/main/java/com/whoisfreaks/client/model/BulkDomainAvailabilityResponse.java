@@ -1,6 +1,6 @@
 /*
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -56,7 +56,7 @@ public class BulkDomainAvailabilityResponse {
   public static final String SERIALIZED_NAME_BULK_DOMAIN_AVAILABILITY_RESPONSE = "bulk_domain_availability_response";
   @SerializedName(SERIALIZED_NAME_BULK_DOMAIN_AVAILABILITY_RESPONSE)
   @javax.annotation.Nullable
-  private List<DomainAvailabilityItem> bulkDomainAvailabilityResponse = new ArrayList<>();
+  private List<DomainAvailabilityItem> bulkDomainAvailabilityResponse;
 
   public BulkDomainAvailabilityResponse() {
   }

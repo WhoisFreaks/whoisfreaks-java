@@ -1,6 +1,6 @@
 /*
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -219,7 +219,6 @@ public class WhoisApi {
     /**
      * Build call for whoisHistory
      * @param domainName Domain to fetch historical WHOIS records for (required)
-     * @param page Page number (optional)
      * @param format  (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -231,7 +230,7 @@ public class WhoisApi {
         <tr><td> 200 </td><td> Historical WHOIS records </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call whoisHistoryCall(String domainName, Integer page, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call whoisHistoryCall(String domainName, String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -260,10 +259,6 @@ public class WhoisApi {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("domainName", domainName));
         }
 
-        if (page != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("page", page));
-        }
-
         if (format != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("format", format));
         }
@@ -288,21 +283,20 @@ public class WhoisApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call whoisHistoryValidateBeforeCall(String domainName, Integer page, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call whoisHistoryValidateBeforeCall(String domainName, String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'domainName' is set
         if (domainName == null) {
             throw new ApiException("Missing the required parameter 'domainName' when calling whoisHistory(Async)");
         }
 
-        return whoisHistoryCall(domainName, page, format, _callback);
+        return whoisHistoryCall(domainName, format, _callback);
 
     }
 
     /**
      * Historical WHOIS records for a domain
-     * 
+     * Every WHOIS record captured for the domain since 1986, in one response (no pagination). Cost 2 credits.
      * @param domainName Domain to fetch historical WHOIS records for (required)
-     * @param page Page number (optional)
      * @param format  (optional)
      * @return WhoisHistoricalResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -313,16 +307,15 @@ public class WhoisApi {
         <tr><td> 200 </td><td> Historical WHOIS records </td><td>  -  </td></tr>
      </table>
      */
-    public WhoisHistoricalResponse whoisHistory(String domainName, Integer page, String format) throws ApiException {
-        ApiResponse<WhoisHistoricalResponse> localVarResp = whoisHistoryWithHttpInfo(domainName, page, format);
+    public WhoisHistoricalResponse whoisHistory(String domainName, String format) throws ApiException {
+        ApiResponse<WhoisHistoricalResponse> localVarResp = whoisHistoryWithHttpInfo(domainName, format);
         return localVarResp.getData();
     }
 
     /**
      * Historical WHOIS records for a domain
-     * 
+     * Every WHOIS record captured for the domain since 1986, in one response (no pagination). Cost 2 credits.
      * @param domainName Domain to fetch historical WHOIS records for (required)
-     * @param page Page number (optional)
      * @param format  (optional)
      * @return ApiResponse&lt;WhoisHistoricalResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -333,17 +326,16 @@ public class WhoisApi {
         <tr><td> 200 </td><td> Historical WHOIS records </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<WhoisHistoricalResponse> whoisHistoryWithHttpInfo(String domainName, Integer page, String format) throws ApiException {
-        okhttp3.Call localVarCall = whoisHistoryValidateBeforeCall(domainName, page, format, null);
+    public ApiResponse<WhoisHistoricalResponse> whoisHistoryWithHttpInfo(String domainName, String format) throws ApiException {
+        okhttp3.Call localVarCall = whoisHistoryValidateBeforeCall(domainName, format, null);
         Type localVarReturnType = new TypeToken<WhoisHistoricalResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Historical WHOIS records for a domain (asynchronously)
-     * 
+     * Every WHOIS record captured for the domain since 1986, in one response (no pagination). Cost 2 credits.
      * @param domainName Domain to fetch historical WHOIS records for (required)
-     * @param page Page number (optional)
      * @param format  (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -355,9 +347,9 @@ public class WhoisApi {
         <tr><td> 200 </td><td> Historical WHOIS records </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call whoisHistoryAsync(String domainName, Integer page, String format, final ApiCallback<WhoisHistoricalResponse> _callback) throws ApiException {
+    public okhttp3.Call whoisHistoryAsync(String domainName, String format, final ApiCallback<WhoisHistoricalResponse> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = whoisHistoryValidateBeforeCall(domainName, page, format, _callback);
+        okhttp3.Call localVarCall = whoisHistoryValidateBeforeCall(domainName, format, _callback);
         Type localVarReturnType = new TypeToken<WhoisHistoricalResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

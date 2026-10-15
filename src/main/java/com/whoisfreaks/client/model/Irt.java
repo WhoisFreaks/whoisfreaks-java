@@ -1,6 +1,6 @@
 /*
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -60,7 +60,7 @@ public class Irt {
   public static final String SERIALIZED_NAME_ADDRESS = "address";
   @SerializedName(SERIALIZED_NAME_ADDRESS)
   @javax.annotation.Nullable
-  private List<String> address = new ArrayList<>();
+  private List<String> address;
 
   public static final String SERIALIZED_NAME_STREET = "street";
   @SerializedName(SERIALIZED_NAME_STREET)
@@ -95,77 +95,77 @@ public class Irt {
   public static final String SERIALIZED_NAME_EMAIL = "email";
   @SerializedName(SERIALIZED_NAME_EMAIL)
   @javax.annotation.Nullable
-  private List<String> email = new ArrayList<>();
+  private List<String> email;
 
   public static final String SERIALIZED_NAME_ABUSE_MAILBOX = "abuse_mailbox";
   @SerializedName(SERIALIZED_NAME_ABUSE_MAILBOX)
   @javax.annotation.Nullable
-  private List<String> abuseMailbox = new ArrayList<>();
+  private List<String> abuseMailbox;
 
   public static final String SERIALIZED_NAME_PHONE = "phone";
   @SerializedName(SERIALIZED_NAME_PHONE)
   @javax.annotation.Nullable
-  private List<String> phone = new ArrayList<>();
+  private List<String> phone;
 
   public static final String SERIALIZED_NAME_FAX_NO = "fax_no";
   @SerializedName(SERIALIZED_NAME_FAX_NO)
   @javax.annotation.Nullable
-  private List<String> faxNo = new ArrayList<>();
+  private List<String> faxNo;
 
   public static final String SERIALIZED_NAME_ORGANIZATIONS = "organizations";
   @SerializedName(SERIALIZED_NAME_ORGANIZATIONS)
   @javax.annotation.Nullable
-  private List<String> organizations = new ArrayList<>();
+  private List<String> organizations;
 
   public static final String SERIALIZED_NAME_ADMIN_CONTACTS = "admin_contacts";
   @SerializedName(SERIALIZED_NAME_ADMIN_CONTACTS)
   @javax.annotation.Nullable
-  private List<String> adminContacts = new ArrayList<>();
+  private List<String> adminContacts;
 
   public static final String SERIALIZED_NAME_TECH_CONTACTS = "tech_contacts";
   @SerializedName(SERIALIZED_NAME_TECH_CONTACTS)
   @javax.annotation.Nullable
-  private List<String> techContacts = new ArrayList<>();
+  private List<String> techContacts;
 
   public static final String SERIALIZED_NAME_REMARKS = "remarks";
   @SerializedName(SERIALIZED_NAME_REMARKS)
   @javax.annotation.Nullable
-  private List<String> remarks = new ArrayList<>();
+  private List<String> remarks;
 
   public static final String SERIALIZED_NAME_SIGNATURE = "signature";
   @SerializedName(SERIALIZED_NAME_SIGNATURE)
   @javax.annotation.Nullable
-  private List<String> signature = new ArrayList<>();
+  private List<String> signature;
 
   public static final String SERIALIZED_NAME_ENCRYPTION = "encryption";
   @SerializedName(SERIALIZED_NAME_ENCRYPTION)
   @javax.annotation.Nullable
-  private List<String> encryption = new ArrayList<>();
+  private List<String> encryption;
 
   public static final String SERIALIZED_NAME_AUTH = "auth";
   @SerializedName(SERIALIZED_NAME_AUTH)
   @javax.annotation.Nullable
-  private List<String> auth = new ArrayList<>();
+  private List<String> auth;
 
   public static final String SERIALIZED_NAME_NOTIFY = "notify";
   @SerializedName(SERIALIZED_NAME_NOTIFY)
   @javax.annotation.Nullable
-  private List<String> notify = new ArrayList<>();
+  private List<String> notify;
 
   public static final String SERIALIZED_NAME_IRT_NFY = "irt_nfy";
   @SerializedName(SERIALIZED_NAME_IRT_NFY)
   @javax.annotation.Nullable
-  private List<String> irtNfy = new ArrayList<>();
+  private List<String> irtNfy;
 
   public static final String SERIALIZED_NAME_MNT_BY = "mnt_by";
   @SerializedName(SERIALIZED_NAME_MNT_BY)
   @javax.annotation.Nullable
-  private List<String> mntBy = new ArrayList<>();
+  private List<String> mntBy;
 
   public static final String SERIALIZED_NAME_MNT_REF = "mnt_ref";
   @SerializedName(SERIALIZED_NAME_MNT_REF)
   @javax.annotation.Nullable
-  private List<String> mntRef = new ArrayList<>();
+  private List<String> mntRef;
 
   public Irt() {
   }

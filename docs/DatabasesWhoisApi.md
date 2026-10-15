@@ -24,7 +24,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.DatabasesWhoisApi;
 
 public class Example {
@@ -39,7 +42,7 @@ public class Example {
     //ApiKeyAuth.setApiKeyPrefix("Token");
 
     DatabasesWhoisApi apiInstance = new DatabasesWhoisApi(defaultClient);
-    LocalDate date = LocalDate.now(); // LocalDate | yyyy-MM-dd; omit for latest
+    LocalDate date = LocalDate.parse("2026-10-01"); // LocalDate | yyyy-MM-dd; omit for latest
     try {
       File result = apiInstance.dbWhoisDaily(date);
       System.out.println(result);
@@ -94,7 +97,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.DatabasesWhoisApi;
 
 public class Example {
@@ -109,7 +115,7 @@ public class Example {
     //ApiKeyAuth.setApiKeyPrefix("Token");
 
     DatabasesWhoisApi apiInstance = new DatabasesWhoisApi(defaultClient);
-    LocalDate date = LocalDate.now(); // LocalDate | yyyy-MM-dd; omit for latest
+    LocalDate date = LocalDate.parse("2026-10-01"); // LocalDate | yyyy-MM-dd; omit for latest
     try {
       File result = apiInstance.dbWhoisMonthly(date);
       System.out.println(result);
@@ -164,7 +170,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.DatabasesWhoisApi;
 
 public class Example {
@@ -179,7 +188,7 @@ public class Example {
     //ApiKeyAuth.setApiKeyPrefix("Token");
 
     DatabasesWhoisApi apiInstance = new DatabasesWhoisApi(defaultClient);
-    LocalDate date = LocalDate.now(); // LocalDate | yyyy-MM-dd; omit for latest
+    LocalDate date = LocalDate.parse("2026-10-01"); // LocalDate | yyyy-MM-dd; omit for latest
     try {
       File result = apiInstance.dbWhoisWeekly(date);
       System.out.println(result);

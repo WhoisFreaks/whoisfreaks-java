@@ -1,6 +1,6 @@
 /*
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -66,7 +66,7 @@ public class InetNum {
   public static final String SERIALIZED_NAME_CIDR = "cidr";
   @SerializedName(SERIALIZED_NAME_CIDR)
   @javax.annotation.Nullable
-  private List<String> cidr = new ArrayList<>();
+  private List<String> cidr;
 
   public static final String SERIALIZED_NAME_NET_NAME = "net_name";
   @SerializedName(SERIALIZED_NAME_NET_NAME)
@@ -81,12 +81,12 @@ public class InetNum {
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
   @javax.annotation.Nullable
-  private List<String> description = new ArrayList<>();
+  private List<String> description;
 
   public static final String SERIALIZED_NAME_COUNTRIES = "countries";
   @SerializedName(SERIALIZED_NAME_COUNTRIES)
   @javax.annotation.Nullable
-  private List<String> countries = new ArrayList<>();
+  private List<String> countries;
 
   public static final String SERIALIZED_NAME_GEOFEED = "geofeed";
   @SerializedName(SERIALIZED_NAME_GEOFEED)
@@ -111,7 +111,7 @@ public class InetNum {
   public static final String SERIALIZED_NAME_LANGUAGES = "languages";
   @SerializedName(SERIALIZED_NAME_LANGUAGES)
   @javax.annotation.Nullable
-  private List<String> languages = new ArrayList<>();
+  private List<String> languages;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
@@ -131,7 +131,7 @@ public class InetNum {
   public static final String SERIALIZED_NAME_REMARKS = "remarks";
   @SerializedName(SERIALIZED_NAME_REMARKS)
   @javax.annotation.Nullable
-  private List<String> remarks = new ArrayList<>();
+  private List<String> remarks;
 
   public static final String SERIALIZED_NAME_ASSIGNMENT_SIZE = "assignment_size";
   @SerializedName(SERIALIZED_NAME_ASSIGNMENT_SIZE)
@@ -141,32 +141,32 @@ public class InetNum {
   public static final String SERIALIZED_NAME_NOTIFY = "notify";
   @SerializedName(SERIALIZED_NAME_NOTIFY)
   @javax.annotation.Nullable
-  private List<String> notify = new ArrayList<>();
+  private List<String> notify;
 
   public static final String SERIALIZED_NAME_MNT_BY = "mnt_by";
   @SerializedName(SERIALIZED_NAME_MNT_BY)
   @javax.annotation.Nullable
-  private List<String> mntBy = new ArrayList<>();
+  private List<String> mntBy;
 
   public static final String SERIALIZED_NAME_MNT_LOWER = "mnt_lower";
   @SerializedName(SERIALIZED_NAME_MNT_LOWER)
   @javax.annotation.Nullable
-  private List<String> mntLower = new ArrayList<>();
+  private List<String> mntLower;
 
   public static final String SERIALIZED_NAME_MNT_DOMAINS = "mnt_domains";
   @SerializedName(SERIALIZED_NAME_MNT_DOMAINS)
   @javax.annotation.Nullable
-  private List<String> mntDomains = new ArrayList<>();
+  private List<String> mntDomains;
 
   public static final String SERIALIZED_NAME_MNT_ROUTES = "mnt_routes";
   @SerializedName(SERIALIZED_NAME_MNT_ROUTES)
   @javax.annotation.Nullable
-  private List<String> mntRoutes = new ArrayList<>();
+  private List<String> mntRoutes;
 
   public static final String SERIALIZED_NAME_MNT_IRT = "mnt_irt";
   @SerializedName(SERIALIZED_NAME_MNT_IRT)
   @javax.annotation.Nullable
-  private List<String> mntIrt = new ArrayList<>();
+  private List<String> mntIrt;
 
   public static final String SERIALIZED_NAME_DATE_CREATED = "date_created";
   @SerializedName(SERIALIZED_NAME_DATE_CREATED)
@@ -186,7 +186,7 @@ public class InetNum {
   public static final String SERIALIZED_NAME_PARENTS = "parents";
   @SerializedName(SERIALIZED_NAME_PARENTS)
   @javax.annotation.Nullable
-  private List<String> parents = new ArrayList<>();
+  private List<String> parents;
 
   public InetNum() {
   }

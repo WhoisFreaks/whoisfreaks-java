@@ -17,7 +17,7 @@
 |**domainRegistrar** | **RegistrarInformation** |  |  [optional] |
 |**nameServers** | **List&lt;String&gt;** |  |  [optional] |
 |**domainStatus** | **List&lt;String&gt;** |  |  [optional] |
-|**whoisRawDomain** | **String** |  |  [optional] |
+|**whoisRawRegistery** | **String** | Raw registry WHOIS text (field name spelled as the API returns it) |  [optional] |
 
 
 

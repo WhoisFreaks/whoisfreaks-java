@@ -1,6 +1,6 @@
 /*
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -60,7 +60,7 @@ public class Route {
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
   @javax.annotation.Nullable
-  private List<String> description = new ArrayList<>();
+  private List<String> description;
 
   public static final String SERIALIZED_NAME_ORIGIN = "origin";
   @SerializedName(SERIALIZED_NAME_ORIGIN)
@@ -70,17 +70,17 @@ public class Route {
   public static final String SERIALIZED_NAME_PINGABLE = "pingable";
   @SerializedName(SERIALIZED_NAME_PINGABLE)
   @javax.annotation.Nullable
-  private List<String> pingable = new ArrayList<>();
+  private List<String> pingable;
 
   public static final String SERIALIZED_NAME_PING_HDL = "ping_hdl";
   @SerializedName(SERIALIZED_NAME_PING_HDL)
   @javax.annotation.Nullable
-  private List<String> pingHdl = new ArrayList<>();
+  private List<String> pingHdl;
 
   public static final String SERIALIZED_NAME_HOLES = "holes";
   @SerializedName(SERIALIZED_NAME_HOLES)
   @javax.annotation.Nullable
-  private List<String> holes = new ArrayList<>();
+  private List<String> holes;
 
   public static final String SERIALIZED_NAME_COUNTRY = "country";
   @SerializedName(SERIALIZED_NAME_COUNTRY)
@@ -90,17 +90,17 @@ public class Route {
   public static final String SERIALIZED_NAME_ORGANIZATIONS = "organizations";
   @SerializedName(SERIALIZED_NAME_ORGANIZATIONS)
   @javax.annotation.Nullable
-  private List<String> organizations = new ArrayList<>();
+  private List<String> organizations;
 
   public static final String SERIALIZED_NAME_MEMBER_OF = "member_of";
   @SerializedName(SERIALIZED_NAME_MEMBER_OF)
   @javax.annotation.Nullable
-  private List<String> memberOf = new ArrayList<>();
+  private List<String> memberOf;
 
   public static final String SERIALIZED_NAME_INJECT = "inject";
   @SerializedName(SERIALIZED_NAME_INJECT)
   @javax.annotation.Nullable
-  private List<String> inject = new ArrayList<>();
+  private List<String> inject;
 
   public static final String SERIALIZED_NAME_AGGR_MTD = "aggr_mtd";
   @SerializedName(SERIALIZED_NAME_AGGR_MTD)
@@ -125,27 +125,27 @@ public class Route {
   public static final String SERIALIZED_NAME_REMARKS = "remarks";
   @SerializedName(SERIALIZED_NAME_REMARKS)
   @javax.annotation.Nullable
-  private List<String> remarks = new ArrayList<>();
+  private List<String> remarks;
 
   public static final String SERIALIZED_NAME_NOTIFY = "notify";
   @SerializedName(SERIALIZED_NAME_NOTIFY)
   @javax.annotation.Nullable
-  private List<String> notify = new ArrayList<>();
+  private List<String> notify;
 
   public static final String SERIALIZED_NAME_MNT_LOWER = "mnt_lower";
   @SerializedName(SERIALIZED_NAME_MNT_LOWER)
   @javax.annotation.Nullable
-  private List<String> mntLower = new ArrayList<>();
+  private List<String> mntLower;
 
   public static final String SERIALIZED_NAME_MNT_ROUTES = "mnt_routes";
   @SerializedName(SERIALIZED_NAME_MNT_ROUTES)
   @javax.annotation.Nullable
-  private List<String> mntRoutes = new ArrayList<>();
+  private List<String> mntRoutes;
 
   public static final String SERIALIZED_NAME_MNT_BY = "mnt_by";
   @SerializedName(SERIALIZED_NAME_MNT_BY)
   @javax.annotation.Nullable
-  private List<String> mntBy = new ArrayList<>();
+  private List<String> mntBy;
 
   public static final String SERIALIZED_NAME_DATE_CREATED = "date_created";
   @SerializedName(SERIALIZED_NAME_DATE_CREATED)

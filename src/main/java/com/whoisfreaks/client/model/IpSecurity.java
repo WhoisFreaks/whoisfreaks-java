@@ -1,6 +1,6 @@
 /*
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -70,7 +70,7 @@ public class IpSecurity {
   public static final String SERIALIZED_NAME_PROXY_PROVIDER_NAMES = "proxy_provider_names";
   @SerializedName(SERIALIZED_NAME_PROXY_PROVIDER_NAMES)
   @javax.annotation.Nullable
-  private List<String> proxyProviderNames = new ArrayList<>();
+  private List<String> proxyProviderNames;
 
   public static final String SERIALIZED_NAME_PROXY_CONFIDENCE_SCORE = "proxy_confidence_score";
   @SerializedName(SERIALIZED_NAME_PROXY_CONFIDENCE_SCORE)
@@ -95,7 +95,7 @@ public class IpSecurity {
   public static final String SERIALIZED_NAME_VPN_PROVIDER_NAMES = "vpn_provider_names";
   @SerializedName(SERIALIZED_NAME_VPN_PROVIDER_NAMES)
   @javax.annotation.Nullable
-  private List<String> vpnProviderNames = new ArrayList<>();
+  private List<String> vpnProviderNames;
 
   public static final String SERIALIZED_NAME_VPN_CONFIDENCE_SCORE = "vpn_confidence_score";
   @SerializedName(SERIALIZED_NAME_VPN_CONFIDENCE_SCORE)

@@ -23,7 +23,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.IpReputationApi;
 
 public class Example {
@@ -84,7 +87,7 @@ public class Example {
 
 IP Reputation Lookup
 
-Threat intel for IP — VPN, proxy, Tor, bots. 1 credit.
+Threat intel for IP: VPN, proxy, Tor, bots. 1 credit.
 
 ### Example
 ```java
@@ -93,7 +96,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.IpReputationApi;
 
 public class Example {
@@ -108,7 +114,7 @@ public class Example {
     //ApiKeyAuth.setApiKeyPrefix("Token");
 
     IpReputationApi apiInstance = new IpReputationApi(defaultClient);
-    String ip = "ip_example"; // String | 
+    String ip = "8.8.8.8"; // String | 
     try {
       IpReputationResponse result = apiInstance.ipReputation(ip);
       System.out.println(result);

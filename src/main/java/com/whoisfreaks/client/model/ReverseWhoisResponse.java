@@ -1,6 +1,6 @@
 /*
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -49,21 +49,21 @@ import java.util.Set;
 import com.whoisfreaks.client.JSON;
 
 /**
- * Reverse WHOIS response. Pagination keys are capitalized (Total_Result/Total_Pages/Current_Page) as returned by the API.
+ * Reverse WHOIS response. Pagination keys (total_Result, total_Pages, current_Page) are spelled as the API returns them.
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.11.0")
 public class ReverseWhoisResponse {
-  public static final String SERIALIZED_NAME_TOTAL_RESULT = "Total_Result";
+  public static final String SERIALIZED_NAME_TOTAL_RESULT = "total_Result";
   @SerializedName(SERIALIZED_NAME_TOTAL_RESULT)
   @javax.annotation.Nullable
   private Integer totalResult;
 
-  public static final String SERIALIZED_NAME_TOTAL_PAGES = "Total_Pages";
+  public static final String SERIALIZED_NAME_TOTAL_PAGES = "total_Pages";
   @SerializedName(SERIALIZED_NAME_TOTAL_PAGES)
   @javax.annotation.Nullable
   private Integer totalPages;
 
-  public static final String SERIALIZED_NAME_CURRENT_PAGE = "Current_Page";
+  public static final String SERIALIZED_NAME_CURRENT_PAGE = "current_Page";
   @SerializedName(SERIALIZED_NAME_CURRENT_PAGE)
   @javax.annotation.Nullable
   private Integer currentPage;
@@ -71,7 +71,7 @@ public class ReverseWhoisResponse {
   public static final String SERIALIZED_NAME_WHOIS_DOMAINS_HISTORICAL = "whois_domains_historical";
   @SerializedName(SERIALIZED_NAME_WHOIS_DOMAINS_HISTORICAL)
   @javax.annotation.Nullable
-  private List<WhoisHistoricalItem> whoisDomainsHistorical = new ArrayList<>();
+  private List<WhoisHistoricalItem> whoisDomainsHistorical;
 
   public ReverseWhoisResponse() {
   }
@@ -257,9 +257,9 @@ public class ReverseWhoisResponse {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("Total_Result");
-    openapiFields.add("Total_Pages");
-    openapiFields.add("Current_Page");
+    openapiFields.add("total_Result");
+    openapiFields.add("total_Pages");
+    openapiFields.add("current_Page");
     openapiFields.add("whois_domains_historical");
 
     // a set of required properties/fields (JSON key names)

@@ -1,6 +1,6 @@
 /*
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -19,8 +19,15 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.whoisfreaks.client.model.EligibilityInfo;
+import com.whoisfreaks.client.model.PersonalInformation;
+import com.whoisfreaks.client.model.RegistrarInformation;
+import com.whoisfreaks.client.model.RegistryData;
+import com.whoisfreaks.client.model.ResellerContact;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -46,7 +53,7 @@ import java.util.Set;
 import com.whoisfreaks.client.JSON;
 
 /**
- * One bulk WHOIS result; success items also carry all WhoisResponse fields.
+ * One bulk WHOIS result. Successful items carry the same fields as a live WHOIS lookup.
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.11.0")
 public class BulkWhoisItem {
@@ -64,6 +71,106 @@ public class BulkWhoisItem {
   @SerializedName(SERIALIZED_NAME_ERROR)
   @javax.annotation.Nullable
   private String error;
+
+  public static final String SERIALIZED_NAME_QUERY_TIME = "query_time";
+  @SerializedName(SERIALIZED_NAME_QUERY_TIME)
+  @javax.annotation.Nullable
+  private String queryTime;
+
+  public static final String SERIALIZED_NAME_WHOIS_SERVER = "whois_server";
+  @SerializedName(SERIALIZED_NAME_WHOIS_SERVER)
+  @javax.annotation.Nullable
+  private String whoisServer;
+
+  public static final String SERIALIZED_NAME_DOMAIN_REGISTERED = "domain_registered";
+  @SerializedName(SERIALIZED_NAME_DOMAIN_REGISTERED)
+  @javax.annotation.Nullable
+  private String domainRegistered;
+
+  public static final String SERIALIZED_NAME_SECURE_DNS = "secure_dns";
+  @SerializedName(SERIALIZED_NAME_SECURE_DNS)
+  @javax.annotation.Nullable
+  private Boolean secureDns;
+
+  public static final String SERIALIZED_NAME_DOMAIN_HANDLE = "domain_handle";
+  @SerializedName(SERIALIZED_NAME_DOMAIN_HANDLE)
+  @javax.annotation.Nullable
+  private String domainHandle;
+
+  public static final String SERIALIZED_NAME_CREATE_DATE = "create_date";
+  @SerializedName(SERIALIZED_NAME_CREATE_DATE)
+  @javax.annotation.Nullable
+  private String createDate;
+
+  public static final String SERIALIZED_NAME_UPDATE_DATE = "update_date";
+  @SerializedName(SERIALIZED_NAME_UPDATE_DATE)
+  @javax.annotation.Nullable
+  private String updateDate;
+
+  public static final String SERIALIZED_NAME_EXPIRY_DATE = "expiry_date";
+  @SerializedName(SERIALIZED_NAME_EXPIRY_DATE)
+  @javax.annotation.Nullable
+  private String expiryDate;
+
+  public static final String SERIALIZED_NAME_DOMAIN_REGISTRAR = "domain_registrar";
+  @SerializedName(SERIALIZED_NAME_DOMAIN_REGISTRAR)
+  @javax.annotation.Nullable
+  private RegistrarInformation domainRegistrar;
+
+  public static final String SERIALIZED_NAME_RESELLER_CONTACT = "reseller_contact";
+  @SerializedName(SERIALIZED_NAME_RESELLER_CONTACT)
+  @javax.annotation.Nullable
+  private ResellerContact resellerContact;
+
+  public static final String SERIALIZED_NAME_REGISTRANT_CONTACT = "registrant_contact";
+  @SerializedName(SERIALIZED_NAME_REGISTRANT_CONTACT)
+  @javax.annotation.Nullable
+  private PersonalInformation registrantContact;
+
+  public static final String SERIALIZED_NAME_ADMINISTRATIVE_CONTACT = "administrative_contact";
+  @SerializedName(SERIALIZED_NAME_ADMINISTRATIVE_CONTACT)
+  @javax.annotation.Nullable
+  private PersonalInformation administrativeContact;
+
+  public static final String SERIALIZED_NAME_TECHNICAL_CONTACT = "technical_contact";
+  @SerializedName(SERIALIZED_NAME_TECHNICAL_CONTACT)
+  @javax.annotation.Nullable
+  private PersonalInformation technicalContact;
+
+  public static final String SERIALIZED_NAME_BILLING_CONTACT = "billing_contact";
+  @SerializedName(SERIALIZED_NAME_BILLING_CONTACT)
+  @javax.annotation.Nullable
+  private PersonalInformation billingContact;
+
+  public static final String SERIALIZED_NAME_ELIGIBILITY_INFO = "eligibility_info";
+  @SerializedName(SERIALIZED_NAME_ELIGIBILITY_INFO)
+  @javax.annotation.Nullable
+  private EligibilityInfo eligibilityInfo;
+
+  public static final String SERIALIZED_NAME_ABUSE_CONTACT = "abuse_contact";
+  @SerializedName(SERIALIZED_NAME_ABUSE_CONTACT)
+  @javax.annotation.Nullable
+  private RegistrarInformation abuseContact;
+
+  public static final String SERIALIZED_NAME_NAME_SERVERS = "name_servers";
+  @SerializedName(SERIALIZED_NAME_NAME_SERVERS)
+  @javax.annotation.Nullable
+  private List<String> nameServers;
+
+  public static final String SERIALIZED_NAME_DOMAIN_STATUS = "domain_status";
+  @SerializedName(SERIALIZED_NAME_DOMAIN_STATUS)
+  @javax.annotation.Nullable
+  private List<String> domainStatus;
+
+  public static final String SERIALIZED_NAME_WHOIS_RAW_DOMAIN = "whois_raw_domain";
+  @SerializedName(SERIALIZED_NAME_WHOIS_RAW_DOMAIN)
+  @javax.annotation.Nullable
+  private String whoisRawDomain;
+
+  public static final String SERIALIZED_NAME_REGISTRY_DATA = "registry_data";
+  @SerializedName(SERIALIZED_NAME_REGISTRY_DATA)
+  @javax.annotation.Nullable
+  private RegistryData registryData;
 
   public BulkWhoisItem() {
   }
@@ -124,6 +231,402 @@ public class BulkWhoisItem {
     this.error = error;
   }
 
+
+  public BulkWhoisItem queryTime(@javax.annotation.Nullable String queryTime) {
+    this.queryTime = queryTime;
+    return this;
+  }
+
+  /**
+   * Get queryTime
+   * @return queryTime
+   */
+  @javax.annotation.Nullable
+  public String getQueryTime() {
+    return queryTime;
+  }
+
+  public void setQueryTime(@javax.annotation.Nullable String queryTime) {
+    this.queryTime = queryTime;
+  }
+
+
+  public BulkWhoisItem whoisServer(@javax.annotation.Nullable String whoisServer) {
+    this.whoisServer = whoisServer;
+    return this;
+  }
+
+  /**
+   * Get whoisServer
+   * @return whoisServer
+   */
+  @javax.annotation.Nullable
+  public String getWhoisServer() {
+    return whoisServer;
+  }
+
+  public void setWhoisServer(@javax.annotation.Nullable String whoisServer) {
+    this.whoisServer = whoisServer;
+  }
+
+
+  public BulkWhoisItem domainRegistered(@javax.annotation.Nullable String domainRegistered) {
+    this.domainRegistered = domainRegistered;
+    return this;
+  }
+
+  /**
+   * Get domainRegistered
+   * @return domainRegistered
+   */
+  @javax.annotation.Nullable
+  public String getDomainRegistered() {
+    return domainRegistered;
+  }
+
+  public void setDomainRegistered(@javax.annotation.Nullable String domainRegistered) {
+    this.domainRegistered = domainRegistered;
+  }
+
+
+  public BulkWhoisItem secureDns(@javax.annotation.Nullable Boolean secureDns) {
+    this.secureDns = secureDns;
+    return this;
+  }
+
+  /**
+   * Get secureDns
+   * @return secureDns
+   */
+  @javax.annotation.Nullable
+  public Boolean getSecureDns() {
+    return secureDns;
+  }
+
+  public void setSecureDns(@javax.annotation.Nullable Boolean secureDns) {
+    this.secureDns = secureDns;
+  }
+
+
+  public BulkWhoisItem domainHandle(@javax.annotation.Nullable String domainHandle) {
+    this.domainHandle = domainHandle;
+    return this;
+  }
+
+  /**
+   * Get domainHandle
+   * @return domainHandle
+   */
+  @javax.annotation.Nullable
+  public String getDomainHandle() {
+    return domainHandle;
+  }
+
+  public void setDomainHandle(@javax.annotation.Nullable String domainHandle) {
+    this.domainHandle = domainHandle;
+  }
+
+
+  public BulkWhoisItem createDate(@javax.annotation.Nullable String createDate) {
+    this.createDate = createDate;
+    return this;
+  }
+
+  /**
+   * Get createDate
+   * @return createDate
+   */
+  @javax.annotation.Nullable
+  public String getCreateDate() {
+    return createDate;
+  }
+
+  public void setCreateDate(@javax.annotation.Nullable String createDate) {
+    this.createDate = createDate;
+  }
+
+
+  public BulkWhoisItem updateDate(@javax.annotation.Nullable String updateDate) {
+    this.updateDate = updateDate;
+    return this;
+  }
+
+  /**
+   * Get updateDate
+   * @return updateDate
+   */
+  @javax.annotation.Nullable
+  public String getUpdateDate() {
+    return updateDate;
+  }
+
+  public void setUpdateDate(@javax.annotation.Nullable String updateDate) {
+    this.updateDate = updateDate;
+  }
+
+
+  public BulkWhoisItem expiryDate(@javax.annotation.Nullable String expiryDate) {
+    this.expiryDate = expiryDate;
+    return this;
+  }
+
+  /**
+   * Get expiryDate
+   * @return expiryDate
+   */
+  @javax.annotation.Nullable
+  public String getExpiryDate() {
+    return expiryDate;
+  }
+
+  public void setExpiryDate(@javax.annotation.Nullable String expiryDate) {
+    this.expiryDate = expiryDate;
+  }
+
+
+  public BulkWhoisItem domainRegistrar(@javax.annotation.Nullable RegistrarInformation domainRegistrar) {
+    this.domainRegistrar = domainRegistrar;
+    return this;
+  }
+
+  /**
+   * Get domainRegistrar
+   * @return domainRegistrar
+   */
+  @javax.annotation.Nullable
+  public RegistrarInformation getDomainRegistrar() {
+    return domainRegistrar;
+  }
+
+  public void setDomainRegistrar(@javax.annotation.Nullable RegistrarInformation domainRegistrar) {
+    this.domainRegistrar = domainRegistrar;
+  }
+
+
+  public BulkWhoisItem resellerContact(@javax.annotation.Nullable ResellerContact resellerContact) {
+    this.resellerContact = resellerContact;
+    return this;
+  }
+
+  /**
+   * Get resellerContact
+   * @return resellerContact
+   */
+  @javax.annotation.Nullable
+  public ResellerContact getResellerContact() {
+    return resellerContact;
+  }
+
+  public void setResellerContact(@javax.annotation.Nullable ResellerContact resellerContact) {
+    this.resellerContact = resellerContact;
+  }
+
+
+  public BulkWhoisItem registrantContact(@javax.annotation.Nullable PersonalInformation registrantContact) {
+    this.registrantContact = registrantContact;
+    return this;
+  }
+
+  /**
+   * Get registrantContact
+   * @return registrantContact
+   */
+  @javax.annotation.Nullable
+  public PersonalInformation getRegistrantContact() {
+    return registrantContact;
+  }
+
+  public void setRegistrantContact(@javax.annotation.Nullable PersonalInformation registrantContact) {
+    this.registrantContact = registrantContact;
+  }
+
+
+  public BulkWhoisItem administrativeContact(@javax.annotation.Nullable PersonalInformation administrativeContact) {
+    this.administrativeContact = administrativeContact;
+    return this;
+  }
+
+  /**
+   * Get administrativeContact
+   * @return administrativeContact
+   */
+  @javax.annotation.Nullable
+  public PersonalInformation getAdministrativeContact() {
+    return administrativeContact;
+  }
+
+  public void setAdministrativeContact(@javax.annotation.Nullable PersonalInformation administrativeContact) {
+    this.administrativeContact = administrativeContact;
+  }
+
+
+  public BulkWhoisItem technicalContact(@javax.annotation.Nullable PersonalInformation technicalContact) {
+    this.technicalContact = technicalContact;
+    return this;
+  }
+
+  /**
+   * Get technicalContact
+   * @return technicalContact
+   */
+  @javax.annotation.Nullable
+  public PersonalInformation getTechnicalContact() {
+    return technicalContact;
+  }
+
+  public void setTechnicalContact(@javax.annotation.Nullable PersonalInformation technicalContact) {
+    this.technicalContact = technicalContact;
+  }
+
+
+  public BulkWhoisItem billingContact(@javax.annotation.Nullable PersonalInformation billingContact) {
+    this.billingContact = billingContact;
+    return this;
+  }
+
+  /**
+   * Get billingContact
+   * @return billingContact
+   */
+  @javax.annotation.Nullable
+  public PersonalInformation getBillingContact() {
+    return billingContact;
+  }
+
+  public void setBillingContact(@javax.annotation.Nullable PersonalInformation billingContact) {
+    this.billingContact = billingContact;
+  }
+
+
+  public BulkWhoisItem eligibilityInfo(@javax.annotation.Nullable EligibilityInfo eligibilityInfo) {
+    this.eligibilityInfo = eligibilityInfo;
+    return this;
+  }
+
+  /**
+   * Get eligibilityInfo
+   * @return eligibilityInfo
+   */
+  @javax.annotation.Nullable
+  public EligibilityInfo getEligibilityInfo() {
+    return eligibilityInfo;
+  }
+
+  public void setEligibilityInfo(@javax.annotation.Nullable EligibilityInfo eligibilityInfo) {
+    this.eligibilityInfo = eligibilityInfo;
+  }
+
+
+  public BulkWhoisItem abuseContact(@javax.annotation.Nullable RegistrarInformation abuseContact) {
+    this.abuseContact = abuseContact;
+    return this;
+  }
+
+  /**
+   * Get abuseContact
+   * @return abuseContact
+   */
+  @javax.annotation.Nullable
+  public RegistrarInformation getAbuseContact() {
+    return abuseContact;
+  }
+
+  public void setAbuseContact(@javax.annotation.Nullable RegistrarInformation abuseContact) {
+    this.abuseContact = abuseContact;
+  }
+
+
+  public BulkWhoisItem nameServers(@javax.annotation.Nullable List<String> nameServers) {
+    this.nameServers = nameServers;
+    return this;
+  }
+
+  public BulkWhoisItem addNameServersItem(String nameServersItem) {
+    if (this.nameServers == null) {
+      this.nameServers = new ArrayList<>();
+    }
+    this.nameServers.add(nameServersItem);
+    return this;
+  }
+
+  /**
+   * Get nameServers
+   * @return nameServers
+   */
+  @javax.annotation.Nullable
+  public List<String> getNameServers() {
+    return nameServers;
+  }
+
+  public void setNameServers(@javax.annotation.Nullable List<String> nameServers) {
+    this.nameServers = nameServers;
+  }
+
+
+  public BulkWhoisItem domainStatus(@javax.annotation.Nullable List<String> domainStatus) {
+    this.domainStatus = domainStatus;
+    return this;
+  }
+
+  public BulkWhoisItem addDomainStatusItem(String domainStatusItem) {
+    if (this.domainStatus == null) {
+      this.domainStatus = new ArrayList<>();
+    }
+    this.domainStatus.add(domainStatusItem);
+    return this;
+  }
+
+  /**
+   * Get domainStatus
+   * @return domainStatus
+   */
+  @javax.annotation.Nullable
+  public List<String> getDomainStatus() {
+    return domainStatus;
+  }
+
+  public void setDomainStatus(@javax.annotation.Nullable List<String> domainStatus) {
+    this.domainStatus = domainStatus;
+  }
+
+
+  public BulkWhoisItem whoisRawDomain(@javax.annotation.Nullable String whoisRawDomain) {
+    this.whoisRawDomain = whoisRawDomain;
+    return this;
+  }
+
+  /**
+   * Get whoisRawDomain
+   * @return whoisRawDomain
+   */
+  @javax.annotation.Nullable
+  public String getWhoisRawDomain() {
+    return whoisRawDomain;
+  }
+
+  public void setWhoisRawDomain(@javax.annotation.Nullable String whoisRawDomain) {
+    this.whoisRawDomain = whoisRawDomain;
+  }
+
+
+  public BulkWhoisItem registryData(@javax.annotation.Nullable RegistryData registryData) {
+    this.registryData = registryData;
+    return this;
+  }
+
+  /**
+   * Get registryData
+   * @return registryData
+   */
+  @javax.annotation.Nullable
+  public RegistryData getRegistryData() {
+    return registryData;
+  }
+
+  public void setRegistryData(@javax.annotation.Nullable RegistryData registryData) {
+    this.registryData = registryData;
+  }
+
   /**
    * A container for additional, undeclared properties.
    * This is a holder for any undeclared properties as specified with
@@ -181,13 +684,33 @@ public class BulkWhoisItem {
     BulkWhoisItem bulkWhoisItem = (BulkWhoisItem) o;
     return Objects.equals(this.status, bulkWhoisItem.status) &&
         Objects.equals(this.domainName, bulkWhoisItem.domainName) &&
-        Objects.equals(this.error, bulkWhoisItem.error)&&
+        Objects.equals(this.error, bulkWhoisItem.error) &&
+        Objects.equals(this.queryTime, bulkWhoisItem.queryTime) &&
+        Objects.equals(this.whoisServer, bulkWhoisItem.whoisServer) &&
+        Objects.equals(this.domainRegistered, bulkWhoisItem.domainRegistered) &&
+        Objects.equals(this.secureDns, bulkWhoisItem.secureDns) &&
+        Objects.equals(this.domainHandle, bulkWhoisItem.domainHandle) &&
+        Objects.equals(this.createDate, bulkWhoisItem.createDate) &&
+        Objects.equals(this.updateDate, bulkWhoisItem.updateDate) &&
+        Objects.equals(this.expiryDate, bulkWhoisItem.expiryDate) &&
+        Objects.equals(this.domainRegistrar, bulkWhoisItem.domainRegistrar) &&
+        Objects.equals(this.resellerContact, bulkWhoisItem.resellerContact) &&
+        Objects.equals(this.registrantContact, bulkWhoisItem.registrantContact) &&
+        Objects.equals(this.administrativeContact, bulkWhoisItem.administrativeContact) &&
+        Objects.equals(this.technicalContact, bulkWhoisItem.technicalContact) &&
+        Objects.equals(this.billingContact, bulkWhoisItem.billingContact) &&
+        Objects.equals(this.eligibilityInfo, bulkWhoisItem.eligibilityInfo) &&
+        Objects.equals(this.abuseContact, bulkWhoisItem.abuseContact) &&
+        Objects.equals(this.nameServers, bulkWhoisItem.nameServers) &&
+        Objects.equals(this.domainStatus, bulkWhoisItem.domainStatus) &&
+        Objects.equals(this.whoisRawDomain, bulkWhoisItem.whoisRawDomain) &&
+        Objects.equals(this.registryData, bulkWhoisItem.registryData)&&
         Objects.equals(this.additionalProperties, bulkWhoisItem.additionalProperties);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(status, domainName, error, additionalProperties);
+    return Objects.hash(status, domainName, error, queryTime, whoisServer, domainRegistered, secureDns, domainHandle, createDate, updateDate, expiryDate, domainRegistrar, resellerContact, registrantContact, administrativeContact, technicalContact, billingContact, eligibilityInfo, abuseContact, nameServers, domainStatus, whoisRawDomain, registryData, additionalProperties);
   }
 
   @Override
@@ -197,6 +720,26 @@ public class BulkWhoisItem {
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    domainName: ").append(toIndentedString(domainName)).append("\n");
     sb.append("    error: ").append(toIndentedString(error)).append("\n");
+    sb.append("    queryTime: ").append(toIndentedString(queryTime)).append("\n");
+    sb.append("    whoisServer: ").append(toIndentedString(whoisServer)).append("\n");
+    sb.append("    domainRegistered: ").append(toIndentedString(domainRegistered)).append("\n");
+    sb.append("    secureDns: ").append(toIndentedString(secureDns)).append("\n");
+    sb.append("    domainHandle: ").append(toIndentedString(domainHandle)).append("\n");
+    sb.append("    createDate: ").append(toIndentedString(createDate)).append("\n");
+    sb.append("    updateDate: ").append(toIndentedString(updateDate)).append("\n");
+    sb.append("    expiryDate: ").append(toIndentedString(expiryDate)).append("\n");
+    sb.append("    domainRegistrar: ").append(toIndentedString(domainRegistrar)).append("\n");
+    sb.append("    resellerContact: ").append(toIndentedString(resellerContact)).append("\n");
+    sb.append("    registrantContact: ").append(toIndentedString(registrantContact)).append("\n");
+    sb.append("    administrativeContact: ").append(toIndentedString(administrativeContact)).append("\n");
+    sb.append("    technicalContact: ").append(toIndentedString(technicalContact)).append("\n");
+    sb.append("    billingContact: ").append(toIndentedString(billingContact)).append("\n");
+    sb.append("    eligibilityInfo: ").append(toIndentedString(eligibilityInfo)).append("\n");
+    sb.append("    abuseContact: ").append(toIndentedString(abuseContact)).append("\n");
+    sb.append("    nameServers: ").append(toIndentedString(nameServers)).append("\n");
+    sb.append("    domainStatus: ").append(toIndentedString(domainStatus)).append("\n");
+    sb.append("    whoisRawDomain: ").append(toIndentedString(whoisRawDomain)).append("\n");
+    sb.append("    registryData: ").append(toIndentedString(registryData)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -223,6 +766,26 @@ public class BulkWhoisItem {
     openapiFields.add("status");
     openapiFields.add("domain_name");
     openapiFields.add("error");
+    openapiFields.add("query_time");
+    openapiFields.add("whois_server");
+    openapiFields.add("domain_registered");
+    openapiFields.add("secure_dns");
+    openapiFields.add("domain_handle");
+    openapiFields.add("create_date");
+    openapiFields.add("update_date");
+    openapiFields.add("expiry_date");
+    openapiFields.add("domain_registrar");
+    openapiFields.add("reseller_contact");
+    openapiFields.add("registrant_contact");
+    openapiFields.add("administrative_contact");
+    openapiFields.add("technical_contact");
+    openapiFields.add("billing_contact");
+    openapiFields.add("eligibility_info");
+    openapiFields.add("abuse_contact");
+    openapiFields.add("name_servers");
+    openapiFields.add("domain_status");
+    openapiFields.add("whois_raw_domain");
+    openapiFields.add("registry_data");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -246,6 +809,38 @@ public class BulkWhoisItem {
       }
       if ((jsonObj.get("error") != null && !jsonObj.get("error").isJsonNull()) && !jsonObj.get("error").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `error` to be a primitive type in the JSON string but got `%s`", jsonObj.get("error").toString()));
+      }
+      if ((jsonObj.get("query_time") != null && !jsonObj.get("query_time").isJsonNull()) && !jsonObj.get("query_time").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `query_time` to be a primitive type in the JSON string but got `%s`", jsonObj.get("query_time").toString()));
+      }
+      if ((jsonObj.get("whois_server") != null && !jsonObj.get("whois_server").isJsonNull()) && !jsonObj.get("whois_server").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `whois_server` to be a primitive type in the JSON string but got `%s`", jsonObj.get("whois_server").toString()));
+      }
+      if ((jsonObj.get("domain_registered") != null && !jsonObj.get("domain_registered").isJsonNull()) && !jsonObj.get("domain_registered").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `domain_registered` to be a primitive type in the JSON string but got `%s`", jsonObj.get("domain_registered").toString()));
+      }
+      if ((jsonObj.get("domain_handle") != null && !jsonObj.get("domain_handle").isJsonNull()) && !jsonObj.get("domain_handle").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `domain_handle` to be a primitive type in the JSON string but got `%s`", jsonObj.get("domain_handle").toString()));
+      }
+      if ((jsonObj.get("create_date") != null && !jsonObj.get("create_date").isJsonNull()) && !jsonObj.get("create_date").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `create_date` to be a primitive type in the JSON string but got `%s`", jsonObj.get("create_date").toString()));
+      }
+      if ((jsonObj.get("update_date") != null && !jsonObj.get("update_date").isJsonNull()) && !jsonObj.get("update_date").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `update_date` to be a primitive type in the JSON string but got `%s`", jsonObj.get("update_date").toString()));
+      }
+      if ((jsonObj.get("expiry_date") != null && !jsonObj.get("expiry_date").isJsonNull()) && !jsonObj.get("expiry_date").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `expiry_date` to be a primitive type in the JSON string but got `%s`", jsonObj.get("expiry_date").toString()));
+      }
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("name_servers") != null && !jsonObj.get("name_servers").isJsonNull() && !jsonObj.get("name_servers").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `name_servers` to be an array in the JSON string but got `%s`", jsonObj.get("name_servers").toString()));
+      }
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("domain_status") != null && !jsonObj.get("domain_status").isJsonNull() && !jsonObj.get("domain_status").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `domain_status` to be an array in the JSON string but got `%s`", jsonObj.get("domain_status").toString()));
+      }
+      if ((jsonObj.get("whois_raw_domain") != null && !jsonObj.get("whois_raw_domain").isJsonNull()) && !jsonObj.get("whois_raw_domain").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `whois_raw_domain` to be a primitive type in the JSON string but got `%s`", jsonObj.get("whois_raw_domain").toString()));
       }
   }
 

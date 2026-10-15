@@ -2,16 +2,15 @@
 
 # HistoricalDnsResponse
 
-Note: 'currenPage' spelling matches the API.
 
 ## Properties
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**totalPages** | **Integer** |  |  [optional] |
-|**currenPage** | **Integer** |  |  [optional] |
+|**currentPage** | **Integer** |  |  [optional] |
 |**totalRecords** | **Integer** |  |  [optional] |
-|**historicalDns** | **List&lt;DnsResponse&gt;** |  |  [optional] |
+|**historicalDnsRecords** | **List&lt;DnsResponse&gt;** |  |  [optional] |
 
 
 

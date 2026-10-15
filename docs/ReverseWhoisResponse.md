@@ -2,7 +2,7 @@
 
 # ReverseWhoisResponse
 
-Reverse WHOIS response. Pagination keys are capitalized (Total_Result/Total_Pages/Current_Page) as returned by the API.
+Reverse WHOIS response. Pagination keys (total_Result, total_Pages, current_Page) are spelled as the API returns them.
 
 ## Properties
 

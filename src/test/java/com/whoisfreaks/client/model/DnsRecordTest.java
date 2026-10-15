@@ -1,6 +1,6 @@
 /*
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -48,6 +48,14 @@ public class DnsRecordTest {
     }
 
     /**
+     * Test the property 'dnsType'
+     */
+    @Test
+    public void dnsTypeTest() {
+        // TODO: test dnsType
+    }
+
+    /**
      * Test the property 'name'
      */
     @Test
@@ -61,6 +69,30 @@ public class DnsRecordTest {
     @Test
     public void ttlTest() {
         // TODO: test ttl
+    }
+
+    /**
+     * Test the property 'rawText'
+     */
+    @Test
+    public void rawTextTest() {
+        // TODO: test rawText
+    }
+
+    /**
+     * Test the property 'rRsetType'
+     */
+    @Test
+    public void rRsetTypeTest() {
+        // TODO: test rRsetType
+    }
+
+    /**
+     * Test the property 'singleName'
+     */
+    @Test
+    public void singleNameTest() {
+        // TODO: test singleName
     }
 
     /**

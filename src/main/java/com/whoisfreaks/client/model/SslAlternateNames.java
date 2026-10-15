@@ -1,6 +1,6 @@
 /*
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -55,22 +55,22 @@ public class SslAlternateNames {
   public static final String SERIALIZED_NAME_DNS_NAMES = "dnsNames";
   @SerializedName(SERIALIZED_NAME_DNS_NAMES)
   @javax.annotation.Nullable
-  private List<String> dnsNames = new ArrayList<>();
+  private List<String> dnsNames;
 
   public static final String SERIALIZED_NAME_EMAIL_ADDRESSES = "emailAddresses";
   @SerializedName(SERIALIZED_NAME_EMAIL_ADDRESSES)
   @javax.annotation.Nullable
-  private List<String> emailAddresses = new ArrayList<>();
+  private List<String> emailAddresses;
 
   public static final String SERIALIZED_NAME_IP_ADDRESSES = "ipAddresses";
   @SerializedName(SERIALIZED_NAME_IP_ADDRESSES)
   @javax.annotation.Nullable
-  private List<String> ipAddresses = new ArrayList<>();
+  private List<String> ipAddresses;
 
   public static final String SERIALIZED_NAME_URIS = "uris";
   @SerializedName(SERIALIZED_NAME_URIS)
   @javax.annotation.Nullable
-  private List<String> uris = new ArrayList<>();
+  private List<String> uris;
 
   public SslAlternateNames() {
   }

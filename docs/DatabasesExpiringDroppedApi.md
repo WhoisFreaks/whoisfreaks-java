@@ -26,7 +26,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.DatabasesExpiringDroppedApi;
 
 public class Example {
@@ -42,7 +45,7 @@ public class Example {
 
     DatabasesExpiringDroppedApi apiInstance = new DatabasesExpiringDroppedApi(defaultClient);
     Boolean whois = true; // Boolean | 
-    LocalDate date = LocalDate.now(); // LocalDate | yyyy-MM-dd; omit for latest
+    LocalDate date = LocalDate.parse("2026-10-01"); // LocalDate | yyyy-MM-dd; omit for latest
     try {
       File result = apiInstance.dbDropped(whois, date);
       System.out.println(result);
@@ -98,7 +101,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.DatabasesExpiringDroppedApi;
 
 public class Example {
@@ -114,7 +120,7 @@ public class Example {
 
     DatabasesExpiringDroppedApi apiInstance = new DatabasesExpiringDroppedApi(defaultClient);
     Boolean whois = true; // Boolean | 
-    LocalDate date = LocalDate.now(); // LocalDate | yyyy-MM-dd; omit for latest
+    LocalDate date = LocalDate.parse("2026-10-01"); // LocalDate | yyyy-MM-dd; omit for latest
     try {
       File result = apiInstance.dbDroppedBacklinks(whois, date);
       System.out.println(result);
@@ -170,7 +176,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.DatabasesExpiringDroppedApi;
 
 public class Example {
@@ -185,8 +194,8 @@ public class Example {
     //ApiKeyAuth.setApiKeyPrefix("Token");
 
     DatabasesExpiringDroppedApi apiInstance = new DatabasesExpiringDroppedApi(defaultClient);
-    LocalDate date = LocalDate.now(); // LocalDate | yyyy-MM-dd; omit for latest
-    String tlds = "tlds_example"; // String | 
+    LocalDate date = LocalDate.parse("2026-10-01"); // LocalDate | yyyy-MM-dd; omit for latest
+    String tlds = "com,net"; // String | 
     try {
       List<String> result = apiInstance.dbDroppedJson(date, tlds);
       System.out.println(result);
@@ -242,7 +251,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.DatabasesExpiringDroppedApi;
 
 public class Example {
@@ -258,7 +270,7 @@ public class Example {
 
     DatabasesExpiringDroppedApi apiInstance = new DatabasesExpiringDroppedApi(defaultClient);
     Boolean whois = true; // Boolean | 
-    LocalDate date = LocalDate.now(); // LocalDate | yyyy-MM-dd; omit for latest
+    LocalDate date = LocalDate.parse("2026-10-01"); // LocalDate | yyyy-MM-dd; omit for latest
     try {
       File result = apiInstance.dbExpired(whois, date);
       System.out.println(result);
@@ -314,7 +326,10 @@ import com.whoisfreaks.client.ApiClient;
 import com.whoisfreaks.client.ApiException;
 import com.whoisfreaks.client.Configuration;
 import com.whoisfreaks.client.auth.*;
-import com.whoisfreaks.client.models.*;
+import com.whoisfreaks.client.model.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.util.List;
 import com.whoisfreaks.client.api.DatabasesExpiringDroppedApi;
 
 public class Example {
@@ -329,7 +344,7 @@ public class Example {
     //ApiKeyAuth.setApiKeyPrefix("Token");
 
     DatabasesExpiringDroppedApi apiInstance = new DatabasesExpiringDroppedApi(defaultClient);
-    LocalDate date = LocalDate.now(); // LocalDate | yyyy-MM-dd; omit for latest
+    LocalDate date = LocalDate.parse("2026-10-01"); // LocalDate | yyyy-MM-dd; omit for latest
     try {
       File result = apiInstance.dbExpiredCleaned(date);
       System.out.println(result);

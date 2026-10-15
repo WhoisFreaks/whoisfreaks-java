@@ -1,6 +1,6 @@
 /*
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -27,6 +27,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import com.whoisfreaks.client.model.ErrorResponse;
 import java.io.File;
 
 import java.lang.reflect.Type;
@@ -74,7 +75,7 @@ public class DatabasesThreatFeedApi {
 
     /**
      * Build call for downloadThreatFeedMalware
-     * @param date Feed date (yyyy-MM-dd); defaults to latest available (optional)
+     * @param date Feed date (yyyy-MM-dd); omit for the full dump of the feed (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -83,12 +84,13 @@ public class DatabasesThreatFeedApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Malware threat feed as CSV (domain,threat_type,confidence,first_seen,last_seen,No_of_threat_matched_pivots) </td><td>  -  </td></tr>
+        <tr><td> 4XX </td><td> Error response (4XX) </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call downloadThreatFeedMalwareCall(String date, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] { "https://files.whoisfreaks.com" };
 
         // Determine Base Path to Use
         if (localCustomBaseUrl != null){
@@ -115,7 +117,8 @@ public class DatabasesThreatFeedApi {
         }
 
         final String[] localVarAccepts = {
-            "application/octet-stream"
+            "application/octet-stream",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -142,7 +145,7 @@ public class DatabasesThreatFeedApi {
     /**
      * Download the daily malware threat feed (CSV)
      * 
-     * @param date Feed date (yyyy-MM-dd); defaults to latest available (optional)
+     * @param date Feed date (yyyy-MM-dd); omit for the full dump of the feed (optional)
      * @return File
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -150,6 +153,7 @@ public class DatabasesThreatFeedApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Malware threat feed as CSV (domain,threat_type,confidence,first_seen,last_seen,No_of_threat_matched_pivots) </td><td>  -  </td></tr>
+        <tr><td> 4XX </td><td> Error response (4XX) </td><td>  -  </td></tr>
      </table>
      */
     public File downloadThreatFeedMalware(String date) throws ApiException {
@@ -160,7 +164,7 @@ public class DatabasesThreatFeedApi {
     /**
      * Download the daily malware threat feed (CSV)
      * 
-     * @param date Feed date (yyyy-MM-dd); defaults to latest available (optional)
+     * @param date Feed date (yyyy-MM-dd); omit for the full dump of the feed (optional)
      * @return ApiResponse&lt;File&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -168,6 +172,7 @@ public class DatabasesThreatFeedApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Malware threat feed as CSV (domain,threat_type,confidence,first_seen,last_seen,No_of_threat_matched_pivots) </td><td>  -  </td></tr>
+        <tr><td> 4XX </td><td> Error response (4XX) </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<File> downloadThreatFeedMalwareWithHttpInfo(String date) throws ApiException {
@@ -179,7 +184,7 @@ public class DatabasesThreatFeedApi {
     /**
      * Download the daily malware threat feed (CSV) (asynchronously)
      * 
-     * @param date Feed date (yyyy-MM-dd); defaults to latest available (optional)
+     * @param date Feed date (yyyy-MM-dd); omit for the full dump of the feed (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -188,6 +193,7 @@ public class DatabasesThreatFeedApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Malware threat feed as CSV (domain,threat_type,confidence,first_seen,last_seen,No_of_threat_matched_pivots) </td><td>  -  </td></tr>
+        <tr><td> 4XX </td><td> Error response (4XX) </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call downloadThreatFeedMalwareAsync(String date, final ApiCallback<File> _callback) throws ApiException {
@@ -207,12 +213,13 @@ public class DatabasesThreatFeedApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Sample malware threat feed as CSV </td><td>  -  </td></tr>
+        <tr><td> 4XX </td><td> Error response (4XX) </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call downloadThreatFeedMalwareSampleCall(final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] { "https://files.whoisfreaks.com" };
 
         // Determine Base Path to Use
         if (localCustomBaseUrl != null){
@@ -235,7 +242,8 @@ public class DatabasesThreatFeedApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/octet-stream"
+            "application/octet-stream",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -269,6 +277,7 @@ public class DatabasesThreatFeedApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Sample malware threat feed as CSV </td><td>  -  </td></tr>
+        <tr><td> 4XX </td><td> Error response (4XX) </td><td>  -  </td></tr>
      </table>
      */
     public File downloadThreatFeedMalwareSample() throws ApiException {
@@ -286,6 +295,7 @@ public class DatabasesThreatFeedApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Sample malware threat feed as CSV </td><td>  -  </td></tr>
+        <tr><td> 4XX </td><td> Error response (4XX) </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<File> downloadThreatFeedMalwareSampleWithHttpInfo() throws ApiException {
@@ -305,6 +315,7 @@ public class DatabasesThreatFeedApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Sample malware threat feed as CSV </td><td>  -  </td></tr>
+        <tr><td> 4XX </td><td> Error response (4XX) </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call downloadThreatFeedMalwareSampleAsync(final ApiCallback<File> _callback) throws ApiException {
@@ -316,7 +327,7 @@ public class DatabasesThreatFeedApi {
     }
     /**
      * Build call for downloadThreatFeedPhishing
-     * @param date Feed date (yyyy-MM-dd); defaults to latest available (optional)
+     * @param date Feed date (yyyy-MM-dd); omit for the full dump of the feed (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -325,12 +336,13 @@ public class DatabasesThreatFeedApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Phishing threat feed as CSV (domain,threat_type,confidence,first_seen,last_seen,No_of_threat_matched_pivots) </td><td>  -  </td></tr>
+        <tr><td> 4XX </td><td> Error response (4XX) </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call downloadThreatFeedPhishingCall(String date, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] { "https://files.whoisfreaks.com" };
 
         // Determine Base Path to Use
         if (localCustomBaseUrl != null){
@@ -357,7 +369,8 @@ public class DatabasesThreatFeedApi {
         }
 
         final String[] localVarAccepts = {
-            "application/octet-stream"
+            "application/octet-stream",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -384,7 +397,7 @@ public class DatabasesThreatFeedApi {
     /**
      * Download the daily phishing threat feed (CSV)
      * 
-     * @param date Feed date (yyyy-MM-dd); defaults to latest available (optional)
+     * @param date Feed date (yyyy-MM-dd); omit for the full dump of the feed (optional)
      * @return File
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -392,6 +405,7 @@ public class DatabasesThreatFeedApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Phishing threat feed as CSV (domain,threat_type,confidence,first_seen,last_seen,No_of_threat_matched_pivots) </td><td>  -  </td></tr>
+        <tr><td> 4XX </td><td> Error response (4XX) </td><td>  -  </td></tr>
      </table>
      */
     public File downloadThreatFeedPhishing(String date) throws ApiException {
@@ -402,7 +416,7 @@ public class DatabasesThreatFeedApi {
     /**
      * Download the daily phishing threat feed (CSV)
      * 
-     * @param date Feed date (yyyy-MM-dd); defaults to latest available (optional)
+     * @param date Feed date (yyyy-MM-dd); omit for the full dump of the feed (optional)
      * @return ApiResponse&lt;File&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -410,6 +424,7 @@ public class DatabasesThreatFeedApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Phishing threat feed as CSV (domain,threat_type,confidence,first_seen,last_seen,No_of_threat_matched_pivots) </td><td>  -  </td></tr>
+        <tr><td> 4XX </td><td> Error response (4XX) </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<File> downloadThreatFeedPhishingWithHttpInfo(String date) throws ApiException {
@@ -421,7 +436,7 @@ public class DatabasesThreatFeedApi {
     /**
      * Download the daily phishing threat feed (CSV) (asynchronously)
      * 
-     * @param date Feed date (yyyy-MM-dd); defaults to latest available (optional)
+     * @param date Feed date (yyyy-MM-dd); omit for the full dump of the feed (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -430,6 +445,7 @@ public class DatabasesThreatFeedApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Phishing threat feed as CSV (domain,threat_type,confidence,first_seen,last_seen,No_of_threat_matched_pivots) </td><td>  -  </td></tr>
+        <tr><td> 4XX </td><td> Error response (4XX) </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call downloadThreatFeedPhishingAsync(String date, final ApiCallback<File> _callback) throws ApiException {
@@ -449,12 +465,13 @@ public class DatabasesThreatFeedApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Sample phishing threat feed as CSV </td><td>  -  </td></tr>
+        <tr><td> 4XX </td><td> Error response (4XX) </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call downloadThreatFeedPhishingSampleCall(final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] { "https://files.whoisfreaks.com" };
 
         // Determine Base Path to Use
         if (localCustomBaseUrl != null){
@@ -477,7 +494,8 @@ public class DatabasesThreatFeedApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/octet-stream"
+            "application/octet-stream",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -511,6 +529,7 @@ public class DatabasesThreatFeedApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Sample phishing threat feed as CSV </td><td>  -  </td></tr>
+        <tr><td> 4XX </td><td> Error response (4XX) </td><td>  -  </td></tr>
      </table>
      */
     public File downloadThreatFeedPhishingSample() throws ApiException {
@@ -528,6 +547,7 @@ public class DatabasesThreatFeedApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Sample phishing threat feed as CSV </td><td>  -  </td></tr>
+        <tr><td> 4XX </td><td> Error response (4XX) </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<File> downloadThreatFeedPhishingSampleWithHttpInfo() throws ApiException {
@@ -547,6 +567,7 @@ public class DatabasesThreatFeedApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Sample phishing threat feed as CSV </td><td>  -  </td></tr>
+        <tr><td> 4XX </td><td> Error response (4XX) </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call downloadThreatFeedPhishingSampleAsync(final ApiCallback<File> _callback) throws ApiException {
@@ -558,7 +579,7 @@ public class DatabasesThreatFeedApi {
     }
     /**
      * Build call for downloadThreatFeedSpam
-     * @param date Feed date (yyyy-MM-dd); defaults to latest available (optional)
+     * @param date Feed date (yyyy-MM-dd); omit for the full dump of the feed (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -567,12 +588,13 @@ public class DatabasesThreatFeedApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Spam threat feed as CSV (domain,threat_type,confidence,first_seen,last_seen,No_of_threat_matched_pivots) </td><td>  -  </td></tr>
+        <tr><td> 4XX </td><td> Error response (4XX) </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call downloadThreatFeedSpamCall(String date, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] { "https://files.whoisfreaks.com" };
 
         // Determine Base Path to Use
         if (localCustomBaseUrl != null){
@@ -599,7 +621,8 @@ public class DatabasesThreatFeedApi {
         }
 
         final String[] localVarAccepts = {
-            "application/octet-stream"
+            "application/octet-stream",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -626,7 +649,7 @@ public class DatabasesThreatFeedApi {
     /**
      * Download the daily spam threat feed (CSV)
      * 
-     * @param date Feed date (yyyy-MM-dd); defaults to latest available (optional)
+     * @param date Feed date (yyyy-MM-dd); omit for the full dump of the feed (optional)
      * @return File
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -634,6 +657,7 @@ public class DatabasesThreatFeedApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Spam threat feed as CSV (domain,threat_type,confidence,first_seen,last_seen,No_of_threat_matched_pivots) </td><td>  -  </td></tr>
+        <tr><td> 4XX </td><td> Error response (4XX) </td><td>  -  </td></tr>
      </table>
      */
     public File downloadThreatFeedSpam(String date) throws ApiException {
@@ -644,7 +668,7 @@ public class DatabasesThreatFeedApi {
     /**
      * Download the daily spam threat feed (CSV)
      * 
-     * @param date Feed date (yyyy-MM-dd); defaults to latest available (optional)
+     * @param date Feed date (yyyy-MM-dd); omit for the full dump of the feed (optional)
      * @return ApiResponse&lt;File&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -652,6 +676,7 @@ public class DatabasesThreatFeedApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Spam threat feed as CSV (domain,threat_type,confidence,first_seen,last_seen,No_of_threat_matched_pivots) </td><td>  -  </td></tr>
+        <tr><td> 4XX </td><td> Error response (4XX) </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<File> downloadThreatFeedSpamWithHttpInfo(String date) throws ApiException {
@@ -663,7 +688,7 @@ public class DatabasesThreatFeedApi {
     /**
      * Download the daily spam threat feed (CSV) (asynchronously)
      * 
-     * @param date Feed date (yyyy-MM-dd); defaults to latest available (optional)
+     * @param date Feed date (yyyy-MM-dd); omit for the full dump of the feed (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -672,6 +697,7 @@ public class DatabasesThreatFeedApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Spam threat feed as CSV (domain,threat_type,confidence,first_seen,last_seen,No_of_threat_matched_pivots) </td><td>  -  </td></tr>
+        <tr><td> 4XX </td><td> Error response (4XX) </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call downloadThreatFeedSpamAsync(String date, final ApiCallback<File> _callback) throws ApiException {
@@ -691,12 +717,13 @@ public class DatabasesThreatFeedApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Sample spam threat feed as CSV </td><td>  -  </td></tr>
+        <tr><td> 4XX </td><td> Error response (4XX) </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call downloadThreatFeedSpamSampleCall(final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] { "https://files.whoisfreaks.com" };
 
         // Determine Base Path to Use
         if (localCustomBaseUrl != null){
@@ -719,7 +746,8 @@ public class DatabasesThreatFeedApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/octet-stream"
+            "application/octet-stream",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -753,6 +781,7 @@ public class DatabasesThreatFeedApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Sample spam threat feed as CSV </td><td>  -  </td></tr>
+        <tr><td> 4XX </td><td> Error response (4XX) </td><td>  -  </td></tr>
      </table>
      */
     public File downloadThreatFeedSpamSample() throws ApiException {
@@ -770,6 +799,7 @@ public class DatabasesThreatFeedApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Sample spam threat feed as CSV </td><td>  -  </td></tr>
+        <tr><td> 4XX </td><td> Error response (4XX) </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<File> downloadThreatFeedSpamSampleWithHttpInfo() throws ApiException {
@@ -789,6 +819,7 @@ public class DatabasesThreatFeedApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Sample spam threat feed as CSV </td><td>  -  </td></tr>
+        <tr><td> 4XX </td><td> Error response (4XX) </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call downloadThreatFeedSpamSampleAsync(final ApiCallback<File> _callback) throws ApiException {

@@ -1,6 +1,6 @@
 /*
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -18,8 +18,15 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.whoisfreaks.client.model.EligibilityInfo;
+import com.whoisfreaks.client.model.PersonalInformation;
+import com.whoisfreaks.client.model.RegistrarInformation;
+import com.whoisfreaks.client.model.RegistryData;
+import com.whoisfreaks.client.model.ResellerContact;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -59,6 +66,166 @@ public class BulkWhoisItemTest {
     @Test
     public void errorTest() {
         // TODO: test error
+    }
+
+    /**
+     * Test the property 'queryTime'
+     */
+    @Test
+    public void queryTimeTest() {
+        // TODO: test queryTime
+    }
+
+    /**
+     * Test the property 'whoisServer'
+     */
+    @Test
+    public void whoisServerTest() {
+        // TODO: test whoisServer
+    }
+
+    /**
+     * Test the property 'domainRegistered'
+     */
+    @Test
+    public void domainRegisteredTest() {
+        // TODO: test domainRegistered
+    }
+
+    /**
+     * Test the property 'secureDns'
+     */
+    @Test
+    public void secureDnsTest() {
+        // TODO: test secureDns
+    }
+
+    /**
+     * Test the property 'domainHandle'
+     */
+    @Test
+    public void domainHandleTest() {
+        // TODO: test domainHandle
+    }
+
+    /**
+     * Test the property 'createDate'
+     */
+    @Test
+    public void createDateTest() {
+        // TODO: test createDate
+    }
+
+    /**
+     * Test the property 'updateDate'
+     */
+    @Test
+    public void updateDateTest() {
+        // TODO: test updateDate
+    }
+
+    /**
+     * Test the property 'expiryDate'
+     */
+    @Test
+    public void expiryDateTest() {
+        // TODO: test expiryDate
+    }
+
+    /**
+     * Test the property 'domainRegistrar'
+     */
+    @Test
+    public void domainRegistrarTest() {
+        // TODO: test domainRegistrar
+    }
+
+    /**
+     * Test the property 'resellerContact'
+     */
+    @Test
+    public void resellerContactTest() {
+        // TODO: test resellerContact
+    }
+
+    /**
+     * Test the property 'registrantContact'
+     */
+    @Test
+    public void registrantContactTest() {
+        // TODO: test registrantContact
+    }
+
+    /**
+     * Test the property 'administrativeContact'
+     */
+    @Test
+    public void administrativeContactTest() {
+        // TODO: test administrativeContact
+    }
+
+    /**
+     * Test the property 'technicalContact'
+     */
+    @Test
+    public void technicalContactTest() {
+        // TODO: test technicalContact
+    }
+
+    /**
+     * Test the property 'billingContact'
+     */
+    @Test
+    public void billingContactTest() {
+        // TODO: test billingContact
+    }
+
+    /**
+     * Test the property 'eligibilityInfo'
+     */
+    @Test
+    public void eligibilityInfoTest() {
+        // TODO: test eligibilityInfo
+    }
+
+    /**
+     * Test the property 'abuseContact'
+     */
+    @Test
+    public void abuseContactTest() {
+        // TODO: test abuseContact
+    }
+
+    /**
+     * Test the property 'nameServers'
+     */
+    @Test
+    public void nameServersTest() {
+        // TODO: test nameServers
+    }
+
+    /**
+     * Test the property 'domainStatus'
+     */
+    @Test
+    public void domainStatusTest() {
+        // TODO: test domainStatus
+    }
+
+    /**
+     * Test the property 'whoisRawDomain'
+     */
+    @Test
+    public void whoisRawDomainTest() {
+        // TODO: test whoisRawDomain
+    }
+
+    /**
+     * Test the property 'registryData'
+     */
+    @Test
+    public void registryDataTest() {
+        // TODO: test registryData
     }
 
 }

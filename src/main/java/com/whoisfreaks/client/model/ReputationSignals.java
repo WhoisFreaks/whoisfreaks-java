@@ -1,6 +1,6 @@
 /*
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -56,17 +56,17 @@ public class ReputationSignals {
   public static final String SERIALIZED_NAME_POSITIVE = "positive";
   @SerializedName(SERIALIZED_NAME_POSITIVE)
   @javax.annotation.Nullable
-  private List<ReputationSignal> positive = new ArrayList<>();
+  private List<ReputationSignal> positive;
 
   public static final String SERIALIZED_NAME_NEGATIVE = "negative";
   @SerializedName(SERIALIZED_NAME_NEGATIVE)
   @javax.annotation.Nullable
-  private List<ReputationSignal> negative = new ArrayList<>();
+  private List<ReputationSignal> negative;
 
   public static final String SERIALIZED_NAME_NEUTRAL = "neutral";
   @SerializedName(SERIALIZED_NAME_NEUTRAL)
   @javax.annotation.Nullable
-  private List<ReputationSignal> neutral = new ArrayList<>();
+  private List<ReputationSignal> neutral;
 
   public ReputationSignals() {
   }
