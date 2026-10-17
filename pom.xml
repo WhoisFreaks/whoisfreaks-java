@@ -5,7 +5,7 @@
     <artifactId>whoisfreaks</artifactId>
     <packaging>jar</packaging>
     <name>WhoisFreaks Java SDK</name>
-    <version>0.23.2</version>
+    <version>0.24.0</version>
     <url>https://github.com/WhoisFreaks/whoisfreaks-java</url>
     <description>Java WHOIS API client: live, historical, reverse and bulk WHOIS, DNS lookup, domain availability, typosquatting</description>
     <scm>

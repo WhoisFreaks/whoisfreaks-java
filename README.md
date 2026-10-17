@@ -61,14 +61,14 @@ Maven:
 <dependency>
   <groupId>com.whoisfreaks</groupId>
   <artifactId>whoisfreaks</artifactId>
-  <version>0.23.2</version>
+  <version>0.24.0</version>
 </dependency>
 ```
 
 Gradle:
 
 ```groovy
-implementation "com.whoisfreaks:whoisfreaks:0.23.2"
+implementation "com.whoisfreaks:whoisfreaks:0.24.0"
 ```
 
 ## Get an API key

@@ -15,7 +15,7 @@ package com.whoisfreaks.client;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.11.0")
 public class Configuration {
-    public static final String VERSION = "0.23.2";
+    public static final String VERSION = "0.24.0";
 
     private static ApiClient defaultApiClient = new ApiClient();
 
